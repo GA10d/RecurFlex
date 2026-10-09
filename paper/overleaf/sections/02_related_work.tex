@@ -1,0 +1,10 @@
+\section{Related Work}
+\subsection{Continuous ECoG Finger Decoding}
+BCI Competition IV Dataset 4 evaluates flexion correlation over subjects and four fingers, excluding the ring finger~\cite{competition2008}. The winning submission achieved 0.46 using band amplitudes and temporally tapped linear regression~\cite{competitionresults}. FingerFlex uses Morlet features and a convolutional encoder--decoder, reporting approximately 0.67 on BCI and results for the nine-subject library subset~\cite{fingerflex}. DTCNet combines wavelets, dilated convolutions, and transposed convolutions, reporting a five-finger BCI mean of 0.69~\cite{dtcnet}. TRACE uses spatiotemporal attention and electrode dropout, and releases author-reimplemented deep-model comparisons~\cite{trace2026}.
+
+Higher reports include approximately 0.82 from kinematic-state classification with regression switching~\cite{switching2016} and 0.85 from BC4D4's outlier cleaning and convolutional/dense regression~\cite{bc4d4}. Their scoring and sample selection require reconciliation with our complete-test evaluation.
+
+\subsection{Spectral Fusion and Broader Subject Evaluation}
+HiLoFuseNet fuses high-gamma and low-frequency streams, reporting 0.674 on BCI and 0.558 on the nine-subject Stanford/Miller setting in its updated author manuscript~\cite{hilofusenet}. CORTEG adapts pretrained scalp-EEG representations to ECoG with spatial adaptation and spectral streams, reporting 0.554 for pooled finger decoding and 0.583 in its enhanced Base configuration~\cite{corteg}. These methods motivate spectral fusion while using different contexts and training conditions.
+
+RecurFlex concatenates fine-grained power and signed subbands before temporal encoding and adds bottleneck recurrence. We use subject-specific fitting without external pretraining. Controlled ablations evaluate the spectral design; literature comparisons account for different finger sets, test intervals, contexts, and scoring grids.

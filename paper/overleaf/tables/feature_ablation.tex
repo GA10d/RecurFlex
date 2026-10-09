@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Frequency-feature ablations on the complete BCI tests. Parameter-matched comparisons are grouped; $\mathrm{LF}_3$ uses 0.5--4, 4--13, 13--30~Hz.}
+\label{tab:ablation}
+\centering
+\footnotesize
+\begin{tabular}{lrr}
+\toprule
+Representation & \rFour & \rFive\\
+\midrule
+\multicolumn{3}{l}{\emph{Matched 43-slot experiment}}\\
+High-frequency Morlet power (\HF) & 0.7160 & 0.7273\\
+Signed low-frequency bands ($\mathrm{LF}_3$) & 0.5574 & 0.5763\\
+$\HF+\mathrm{LF}_3$ & 0.7584 & 0.7714\\
+\midrule
+\multicolumn{3}{l}{\emph{Matched 44-slot band-splitting experiment}}\\
+$\HF+\mathrm{LF}_3$; alpha slot zeroed & 0.7624 & 0.7749\\
+$\HF+\mathrm{LF}_4$ (RecurFlex) & \textbf{0.7741} & \textbf{0.7835}\\
+\midrule
+\multicolumn{3}{l}{\emph{Separate frequency-grid comparison}}\\
+Linear-grid 0.5--300-Hz Morlet power & 0.6839 & 0.6962\\
+\bottomrule
+\end{tabular}
+\end{table}

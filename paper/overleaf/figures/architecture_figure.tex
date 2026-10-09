@@ -1,0 +1,8 @@
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\input{figures/recurflex_architecture.tikz}%
+}
+\caption{RecurFlex architecture. (a) Preprocessed ECoG branches into signed low-frequency voltages and Morlet power; their 100-Hz features are merged and flattened. (b) A mirrored encoder--decoder surrounds a residual BiGRU bottleneck. Dashed paths concatenate encoder features with upsampled decoder features; channel counts are shown before concatenation. (c) A pointwise $1\times1$ Conv1D maps 128 concatenated channels to five trajectories. Feature and output glyphs are schematic.}
+\label{fig:model}
+\end{figure*}

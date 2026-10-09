@@ -1,0 +1,7 @@
+\begin{abstract}
+Continuous finger trajectory decoding from electrocorticography (ECoG) benefits from complementary spectral features and temporal context. We present RecurFlex, a subject-specific decoder combining 40 high-frequency Morlet powers and four signed low-frequency bands with a multiscale convolutional encoder--decoder and residual bidirectional GRU context at the bottleneck. A combined mean-squared-error and temporal cosine objective trains one model per subject to predict five trajectories without target shifting or prediction smoothing. On BCI Competition IV Dataset 4, complete official 200-second tests yield a four-finger Pearson correlation of 0.7741 under the original competition metric and a five-finger mean of 0.7835. On the nine-subject Miller fingerflex subset, fresh training on the first two thirds yields a five-finger mean of 0.6432 on the remaining third. Controlled feature ablations support combining high-frequency power with signed voltage. These findings demonstrate strong offline decoding across two benchmark settings; protocol differences qualify comparisons with reported state-of-the-art results.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Electrocorticography, finger trajectory decoding, multiband features, convolutional encoder--decoder, bidirectional GRU.
+\end{IEEEkeywords}

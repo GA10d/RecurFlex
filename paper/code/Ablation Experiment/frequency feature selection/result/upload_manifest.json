@@ -1,0 +1,14 @@
+{
+  "common.py": "7fd80a0cccc518f8f5c2305280a2d5b2267f68f9d0ddaa709ae6aaa9264945f7",
+  "run.py": "87aeea4a796509e8ce6ef8e7b54246e93588944494fe6841ecd71ed21e9b9ed0",
+  "verify.py": "5998b4e9e808d77a81309cae6f2e02b6455e63139481a2eea1dcc6ab77e3f555",
+  "worker.py": "62efa522729cfb3da0671f76068f5b62fe70a6eeaf3368e82f8dfebddd983bb1",
+  "protocol.json": "b35741d3cb85729ddb496731d976178de36bdbade2df1bb050ca9352a714b0c2",
+  "main_source/config.py": "0e65a2d739a223eb5838cbd18878ac3df79aa73de6d94e4440d33316110a4341",
+  "main_source/data.py": "1dc1d1510f7062f9afe71db45b119f8b3b87173db140a324e9a3f092787cb3e6",
+  "main_source/inference.py": "9b115851bd18bbd2f5ba9e86afd016465fa52212d109c45c0c72415b730ced32",
+  "main_source/metrics.py": "b0901c8dc34a0dfbad1df4b64b28ff0f8bce436c910e747260cb2ff1c3d2f265",
+  "main_source/model.py": "ffe3f6f277f432ad52ccd477ead372b734a11f7d3aa4f8f446f6547296264ca3",
+  "main_source/train.py": "3880c20a9c722666276d65d12de405b27d41d5365c576340615a02d007132599",
+  "main_source/utils.py": "b20fd6e87a4bc56487adecbfc844ebc01ce71be1acd3bbc7fa9f938559384165"
+}

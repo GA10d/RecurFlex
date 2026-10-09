@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "subject": 1,
+  "seed": 42,
+  "features": 44,
+  "device": "cpu",
+  "full_training_record_samples": 400000,
+  "raw_feature_shape": [
+    62,
+    44,
+    40000
+  ],
+  "selected_feature_shape": [
+    16,
+    44,
+    40000
+  ],
+  "training_window": 512,
+  "optimizer_updates": 1,
+  "smoke_epochs": 1,
+  "windows_per_epoch": 2,
+  "batch": 2,
+  "training_loss": 0.6475064754486084,
+  "fitted_scalers_match_full_training_source": true,
+  "scaler_maximum_absolute_difference": {
+    "feature_center": 1.1641532182693481e-10,
+    "feature_scale": 0.0,
+    "target_min": 4.440892098500626e-16,
+    "target_range": 1.7763568394002505e-15
+  },
+  "changed_tensors": 53,
+  "saved_model_reload_output": [
+    1,
+    5,
+    512
+  ],
+  "supplied_checkpoint_unchanged": true,
+  "full_training_budget_rerun": false,
+  "fit": {
+    "subject": 1,
+    "phase": "full",
+    "seed": 42,
+    "epochs": 1,
+    "selected_epoch": 1,
+    "elapsed": 0.10900000017136335,
+    "model_sha256": "3fa3bd5957e1a16cf8f3ac61a482094579fb5ed090890aec8401e17d5c984854"
+  }
+}

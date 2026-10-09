@@ -1,0 +1,52 @@
+{
+  "model": "RecurFlex",
+  "seed": 42,
+  "features": 44,
+  "parameters": 6808198,
+  "settings": {
+    "seed": 42,
+    "window": 512,
+    "inference_window": 2048,
+    "batch": 64,
+    "windows_per_epoch": 8192,
+    "lr": 8.42e-05,
+    "weight_decay": 0.0001,
+    "dropout": 0.1,
+    "channel_count": 16,
+    "features": 44,
+    "max_epochs": 100,
+    "patience": 25
+  },
+  "subjects": [
+    1,
+    2,
+    3
+  ],
+  "feature_design": "40 log-spaced Morlet powers at 40-300 Hz + signed 0.5-4/4-8/8-13/13-30 Hz",
+  "target_pairing": "same timestamp",
+  "training_window": 512,
+  "inference_window": 2048,
+  "inference_stride": 2048,
+  "models_per_subject": 1,
+  "output_operations": [
+    "inverse training MinMax",
+    "linear interpolation 100 Hz to 1000 Hz"
+  ],
+  "scoring_samples_per_subject": 200000,
+  "scoring_hz": 1000,
+  "official_finger_indices": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "full_training_completed": true,
+  "original_training_epochs": {
+    "1": 112,
+    "2": 69,
+    "3": 104
+  },
+  "weight_source": "completed server hybrid_4 fits",
+  "organized_pipeline_status": "Full-record inference and evaluation rerun; full-record one-minibatch training smoke verified",
+  "input_selection_status": "Fixed training-derived 16-electrode sets; scalers refitted for all 44 selected features"
+}

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "models": 9,
+  "full_training_complete": true,
+  "full_test_records": 9,
+  "samples_per_record": 200000,
+  "paired_hybrid_initialization_equal": true,
+  "original_nonstem_initialization_preserved": true,
+  "sample_windows_match_previous": true,
+  "unchanged_high_power_and_delta_beta_verified": true,
+  "reference_three_band_scaling_preserved": true,
+  "weights_and_predictions_and_source_hashes_checked": true,
+  "independent_scipy_pearson_agrees": true,
+  "full_output_coverage_checked": true,
+  "means": {
+    "linear_morlet": {
+      "r4": 0.6839213130930414,
+      "r5": 0.6962257211888664,
+      "mae4": 0.47226434497154296,
+      "mse4": 0.5679231447624273
+    },
+    "hybrid_3_control": {
+      "r4": 0.7624240180798482,
+      "r5": 0.774858355044735,
+      "mae4": 0.4434279664730005,
+      "mse4": 0.4828303286701611
+    },
+    "hybrid_4": {
+      "r4": 0.7740935210011299,
+      "r5": 0.7835470327686075,
+      "mae4": 0.429385104996421,
+      "mse4": 0.4531060383972072
+    }
+  }
+}

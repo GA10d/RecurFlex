@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "independent_scipy_pearson_agrees": true,
+  "all_nine_complete_coverage": true,
+  "all_local_python_source_parses": true,
+  "seed": 42,
+  "models": 9,
+  "notebook_executed_without_errors": true,
+  "executed_notebook_code_cells": 4,
+  "embedded_notebook_figures": 2,
+  "delivered_artifact_sha256": {
+    "README.md": "b6dd1db32118442ecc193da6cc85063872a578077719af86ccd4ab3eb30d4d6b",
+    "code/protocol.json": "b35741d3cb85729ddb496731d976178de36bdbade2df1bb050ca9352a714b0c2",
+    "code/results.ipynb": "a00ed61933bd30fe82470a20be98f82f41d6356f4c287bacdd52a7aa02136bae",
+    "result/report.md": "adfabf6befd79827caa47c0e3fa9b9961259bbc1f22057d001362a2745b15e2f",
+    "result/summary.json": "ca806a2d04594d91c14851dbc9365a325e3a1c5459263609b8343c0d62f001cd",
+    "result/subject_metrics.csv": "999cd9f32a7068c9152e23fb319354734b26f6e9840c229c1218cd598e81eb34",
+    "result/mean_metrics.csv": "49edcac5deb2358755afb78b4c996788695b7d2ba61f79e5bf6f72ff666c98b2",
+    "result/contrasts.csv": "e46dbf92bb4a1cde0fa45af48183bce3a16ac71a81eb286f73b70b02daf6a725",
+    "result/feature_ablation.png": "19918798aaf655c8c9b721b7274c6ac17db0ad42f412d6870a299359f2763b43",
+    "result/feature_ablation.svg": "324a580929b08cf1104fb122620ee17dfd9a4c4ceb8af0a4a7bcffa023f9dce4",
+    "result/feature_ablation.pdf": "84c8a397abd2019ce0bddb7c1b7d359bb5e79f6fc2b286e45007af91afcec3fd",
+    "result/training_curves.png": "42c112b71c0565cc6e544aa67269f7ab3f774ae5846dd885bdf019e6aeeeedae"
+  },
+  "readme_hash_before_broadband_followup": "1656662a7f8329ef7933ab17a8755d6ccbcbbb9b4d52e0563a9499c3bf6f28b2",
+  "broadband_followup": "broadband_0p5_300/result/report.md"
+}

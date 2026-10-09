@@ -1,0 +1,12 @@
+{
+  "group": "hybrid_4",
+  "subject": 1,
+  "seed": 42,
+  "epochs": 112,
+  "elapsed": 234.31128042936325,
+  "initial_state_sha256": "c2aef09222929baf4b4c650ff4a7ddeb91fa12174161f3b36344326f23a5eaac",
+  "nonstem_initial_sha256": "5b20806741c05c222052cb87600750b5190284cdbd4987f668606499bb52a23c",
+  "sampling_sha256": "801724c2ae19fc86f15cdfc802f6d3dbdd0b5034bdefbd47231dffdf02e1baf2",
+  "model_sha256": "875c0acabd6b2266eaaea454594fb827359b2f70a70c1b8ba286de01e766e354",
+  "parameters": 6808198
+}

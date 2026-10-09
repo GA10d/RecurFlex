@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "models": 9,
+  "full_training_complete": true,
+  "full_test_records": 9,
+  "samples_per_record": 200000,
+  "initialization_hashes": 1,
+  "same_window_sampling_by_subject": true,
+  "protocol_and_weight_and_prediction_hashes_checked": true,
+  "best_group": "hybrid",
+  "means": {
+    "morlet": {
+      "r4": 0.7160496570160956,
+      "r5": 0.7272870012288412,
+      "mae4": 0.4584463976868482,
+      "mse4": 0.523025678829227
+    },
+    "low_frequency": {
+      "r4": 0.5573630250928339,
+      "r5": 0.5763470459396747,
+      "mae4": 0.5116720232978647,
+      "mse4": 0.7043270075348843
+    },
+    "hybrid": {
+      "r4": 0.7583730662365196,
+      "r5": 0.7714153324085733,
+      "mae4": 0.44543006867518037,
+      "mse4": 0.4869517065651083
+    }
+  }
+}

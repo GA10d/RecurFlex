@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "reference_group": "hybrid_4",
+  "correlation_tolerance": 5e-05,
+  "subjects": [
+    {
+      "subject": 1,
+      "reference_prediction": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\predictions\\s1_hybrid_4.npz",
+      "reference_prediction_sha256": "cf02b7c0351c8bc46a1750eb857f5c55d67822c87a7ab8d70ba9f4d161e0bf49",
+      "maximum_absolute_difference": {
+        "prediction_100hz": 0.0025243183043652806,
+        "prediction_1000hz": 0.0025243183043652806
+      },
+      "reference_r4": 0.8380629759100348,
+      "current_r4": 0.838068408552266,
+      "r4_absolute_difference": 5.432642231295581e-06
+    },
+    {
+      "subject": 2,
+      "reference_prediction": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\predictions\\s2_hybrid_4.npz",
+      "reference_prediction_sha256": "400c44650e70c59c3e5d5ccbc78273dd422308a7ae1d23ac592a503c99249638",
+      "maximum_absolute_difference": {
+        "prediction_100hz": 0.004084116086382039,
+        "prediction_1000hz": 0.004084116086382039
+      },
+      "reference_r4": 0.696300153581468,
+      "current_r4": 0.6962977751396544,
+      "r4_absolute_difference": 2.3784418136107988e-06
+    },
+    {
+      "subject": 3,
+      "reference_prediction": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\predictions\\s3_hybrid_4.npz",
+      "reference_prediction_sha256": "5e18128b943cefec5e7378a95c742fb756882c2f5373deecc1575ed24615bbd5",
+      "maximum_absolute_difference": {
+        "prediction_100hz": 0.0029143168917831197,
+        "prediction_1000hz": 0.0029143168917831197
+      },
+      "reference_r4": 0.7879174335118871,
+      "current_r4": 0.7879166844808818,
+      "r4_absolute_difference": 7.490310053315241e-07
+    }
+  ],
+  "numerical_identity_required": false
+}

@@ -1,0 +1,40 @@
+\section{Results}
+\subsection{Datasets and Evaluation Protocol}
+\textbf{BCI Competition IV Dataset 4.} We use the released 400-second training recordings and official 200-second test recordings for S1--S3, with 62, 48, and 64 electrodes, respectively~\cite{competition2008}. Final training budgets are 112, 69, and 104 epochs. The supplied full-training checkpoints were verified against their source weights and re-evaluated from raw ECoG using the consolidated implementation. Each prediction contains $200{,}000\times5$ values. The primary score follows the competition's arithmetic mean of twelve correlations: four fingers for each of three subjects. All original test timestamps are scored.
+
+\textbf{Miller fingerflex extension.} We evaluate bp, cc, ht, jc, jp, mv, wc, wm, and zt~\cite{miller2019}, with 38--64 electrodes and approximately 179--610~s per recording. For $N$ original samples, the test boundary is $b=40\lfloor(2N/3)/40\rfloor$. Development uses $[0,b-2000)$ and testing $[b,N)$, with a two-second guard. The development interval's last 20\% is inner validation, separated by another two-second guard. Intervals are processed separately; electrode selection and scaling are refitted in each phase.
+
+Inner training uses at most 100 epochs and patience 25, selecting by validation-interior four-finger correlation. The final budget is that epoch multiplied by the development/inner-training duration ratio, rounded and clipped to 8--160. Final models are trained afresh with common architecture and optimization settings. Test labels remain local; checkpoints and predictions are frozen before local scoring. This follows the competition's chronological split principle but is not an official nine-subject split. BCI recordings originate from this library, so the cohorts overlap.
+
+We calculate each subject/finger Pearson correlation $r_{sf}$ over its complete test interval. With $\mathcal F_4=\{1,2,3,5\}$ and $\mathcal F_5=\{1,2,3,4,5\}$,
+\begin{equation}
+\bar r_q=\frac{1}{S}\sum_{s=1}^{S}\frac{1}{q}\sum_{f\in\mathcal F_q}r_{sf},\qquad q\in\{4,5\}.
+\end{equation}
+Subjects receive equal weight. We predict the ring finger but use \rFour{} as the official BCI metric and \rFive{} as the main Miller metric. BCI MAE and MSE average the same four fingers and subjects in original glove units. Correlation measures regression, not classification accuracy.
+
+\input{tables/subject_results}
+
+\subsection{Performance on the Two Benchmark Settings}
+Table~\ref{tab:subjects} gives the complete subject-level results. On BCI, RecurFlex achieves \rFour{} of 0.7741 and \rFive{} of 0.7835 over all 600,000 test samples across subjects. Four-finger MAE and MSE are 0.4294 and 0.4531. All three subjects obtain four-finger correlations above 0.69; the strongest is S1 at 0.8381. Under the original metric, the mean exceeds the historical winning score by approximately 0.3141, without restricting evaluation to active movements or selected test subsequences.
+
+On the nine-subject extension, \rFive{} is 0.6432 and \rFour{} is 0.6373 over 1,556,880 original test samples. The five-finger subject standard deviation is 0.1756; it describes between-subject variability in this single-seed experiment. Performance ranges from 0.2589 for wm to 0.8697 for mv. The little finger has the lowest mean correlation, 0.5396, indicating residual heterogeneity across subjects and fingers.
+
+\subsection{Controlled Frequency-Feature Ablations}
+Table~\ref{tab:ablation} reports full official-test scores from fresh feature-variant fits. The first group uses a common 43-slot model, 6,805,126 parameters, identical initialization, electrodes, sampled windows, and budgets. Unused slots are zeroed after scaling. Signed low-frequency input alone obtains \rFour{} of 0.5574, high-frequency power alone 0.7160, and their three-band combination 0.7584. Fusion improves over power alone by 0.0423, with gains for all three subjects in this controlled experiment.
+
+The second group compares three versus four signed bands with a common 44-slot model and matched initialization. Splitting the 4--13-Hz band into theta and alpha improves \rFour{} from 0.7624 to 0.7741, a mean change of 0.0117. Subject changes are $+0.0448$, $+0.0021$, and $-0.0119$; the gain is concentrated in S1 and is not universal. A separate 40-center, linearly spaced 0.5--300-Hz power representation obtains 0.6839, below the high-frequency log-grid representation. Taken together, the experiments support preserving high-frequency spectral resolution and signed low-frequency information. They do not independently establish the benefit of the BiGRU, for which a matched removal ablation remains necessary.
+
+\input{tables/feature_ablation}
+
+\subsection{Comparison with Published Results and Limitations}
+Table~\ref{tab:literature} lists BCI scores reported by the TRACE authors~\cite{trace2026}; these baselines were not retrained by us. Our five-finger mean, 0.7835, exceeds their reported TRACE mean of 0.724 by approximately 0.0595, with numerically higher scores for all three subjects. This comparison uses \rFive{}, not the original competition's \rFour{}.
+
+The repository reports Gaussian-smoothed predictions ($\sigma=6$). Its released TRACE configuration shifts targets by 0.2~s; the evaluator scores five outputs at 100~Hz after delay and stride cropping. RecurFlex has no explicit shift or smoothing and scores all original 1,000-Hz timestamps. The released BCI configuration uses the official test as its validation monitor for checkpoint selection. These code-level findings do not verify historical README runs~\cite{trace2026}.
+
+Other BCI reports include HiLoFuseNet's 0.674~\cite{hilofusenet}, switching regression's approximately 0.82~\cite{switching2016}, and BC4D4's approximately 0.85~\cite{bc4d4}. The latter two require reconciliation of scoring and sample selection with our full-original-test evaluation. Unsuccessful reproduction does not invalidate the published BC4D4 result.
+
+On Miller, our 0.6432 is numerically above TRACE's 0.508 and enhanced CORTEG Base's 0.583. TRACE uses an 85/15 split, whereas we test the final third. HiLoFuseNet and CORTEG use the first 400~s for long recordings and 2:1 splits otherwise; their native 25-Hz targets and past-context inputs also differ from our offline reconstruction~\cite{hilofusenet,corteg}. CORTEG's pooled or transfer fitting further differs from our subject-specific training. These are cross-protocol comparisons.
+
+\input{tables/literature_comparison}
+
+These results support strong offline performance relative to reported state-of-the-art methods; superiority requires matched data, splits, targets, grids, and context. Earlier method exploration inspected the public BCI test, so final prediction freezing does not imply test-blind development. Single-seed results are descriptive. Additional seeds, matched recurrent/context ablations, and unused test data would strengthen generalization evidence.

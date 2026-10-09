@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "models": 6,
+  "full_training_complete": true,
+  "full_test_records": 6,
+  "samples_per_record": 200000,
+  "matched_initialization_and_sample_windows_to_previous": true,
+  "weights_and_predictions_and_source_hashes_checked": true,
+  "independent_scipy_pearson_agrees": true,
+  "full_output_coverage_checked": true,
+  "best_new_group": "morlet_broadband",
+  "means": {
+    "morlet_broadband": {
+      "r4": 0.39828881925166626,
+      "r5": 0.4221821547489222,
+      "mae4": 0.6285755627481668,
+      "mse4": 0.985464074528771
+    },
+    "signed_logbank": {
+      "r4": 0.3551398404466101,
+      "r5": 0.3883311736183357,
+      "mae4": 0.6229579476160974,
+      "mse4": 0.9968669910292073
+    }
+  }
+}

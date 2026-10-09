@@ -1,0 +1,40 @@
+{
+  "model": "RecurFlex",
+  "feature_design": "40 high-frequency Morlet power + 4 signed low bands",
+  "features": 44,
+  "parameters": 6808198,
+  "seed": 42,
+  "subjects": [
+    {
+      "subject": 1,
+      "epochs": 112,
+      "source_checkpoint": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\fits\\s1_hybrid_4\\model.pt",
+      "source_sha256": "875c0acabd6b2266eaaea454594fb827359b2f70a70c1b8ba286de01e766e354",
+      "checkpoint_sha256": "875c0acabd6b2266eaaea454594fb827359b2f70a70c1b8ba286de01e766e354",
+      "scalers_sha256": "3b845b9e71a3513874f789128203d0df0ba944f8e9b7d8aad8be95dd6173bfa0",
+      "tensor_equality": true
+    },
+    {
+      "subject": 2,
+      "epochs": 69,
+      "source_checkpoint": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\fits\\s2_hybrid_4\\model.pt",
+      "source_sha256": "742409e26ce3a17004f06b8da4f90e9853cd334d40481152cdc6deb2f2e43803",
+      "checkpoint_sha256": "742409e26ce3a17004f06b8da4f90e9853cd334d40481152cdc6deb2f2e43803",
+      "scalers_sha256": "31e1be0b1fdcff466a5355acdb8ac4e2a3a9ec8d090c1c944f32b190ee30c71f",
+      "tensor_equality": true
+    },
+    {
+      "subject": 3,
+      "epochs": 104,
+      "source_checkpoint": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\fits\\s3_hybrid_4\\model.pt",
+      "source_sha256": "a426441bc5b3050e8627729873243b7d69cdd68fdd0bd33d44d8c307e4b606f7",
+      "checkpoint_sha256": "a426441bc5b3050e8627729873243b7d69cdd68fdd0bd33d44d8c307e4b606f7",
+      "scalers_sha256": "689a00647d41d2b597b59ccb4fc77214016ec526e0ea3228b51ccf4878f3c0fb",
+      "tensor_equality": true
+    }
+  ],
+  "source_protocol": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Ablation Experiment\\frequency feature selection\\linear_grid_and_split_lowbands\\result\\server_results\\protocol.json",
+  "source_protocol_sha256": "2d2dcde68709f715a6ef21546cf94d7bc44ce5f6860daa2133d1e872d366822b",
+  "description": "Completed seed-42 hybrid_4 full-training final weights; checkpoint bytes preserved.",
+  "archived_previous_experiment": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Main Experiment\\archive\\legacy_hybrid3_20261008"
+}

@@ -1,0 +1,332 @@
+{
+  "subjects": [
+    {
+      "group": "linear_morlet",
+      "subject": 1,
+      "seed": 42,
+      "features": 40,
+      "model_slots": 43,
+      "r_thumb": 0.6687944103487208,
+      "r_index": 0.7984033307753049,
+      "r_middle": 0.5058366300466273,
+      "r_ring": 0.7820305087408042,
+      "r_little": 0.6924707476660952,
+      "r4": 0.666376279709187,
+      "r5": 0.6895071255155105,
+      "mae4": 0.45073515837255085,
+      "mse4": 0.5969387895608034,
+      "samples": 200000,
+      "epochs": 112,
+      "parameters": 6805126,
+      "training_seconds": 241.40374087542295
+    },
+    {
+      "group": "linear_morlet",
+      "subject": 2,
+      "seed": 42,
+      "features": 40,
+      "model_slots": 43,
+      "r_thumb": 0.7044074559941449,
+      "r_index": 0.7625541223561138,
+      "r_middle": 0.6327882291458189,
+      "r_ring": 0.6915076594810005,
+      "r_little": 0.47729884582735577,
+      "r4": 0.6442621633308584,
+      "r5": 0.6537112625608869,
+      "mae4": 0.5139872453664383,
+      "mse4": 0.6096158754688281,
+      "samples": 200000,
+      "epochs": 69,
+      "parameters": 6805126,
+      "training_seconds": 148.6638353690505
+    },
+    {
+      "group": "linear_morlet",
+      "subject": 3,
+      "seed": 42,
+      "features": 40,
+      "model_slots": 43,
+      "r_thumb": 0.8351799202177206,
+      "r_index": 0.7158218684260589,
+      "r_middle": 0.6506082121224119,
+      "r_ring": 0.7627918924946955,
+      "r_little": 0.762891984190122,
+      "r4": 0.7411254962390783,
+      "r5": 0.7454587754902018,
+      "mae4": 0.4520706311756398,
+      "mse4": 0.4972147692576506,
+      "samples": 200000,
+      "epochs": 104,
+      "parameters": 6805126,
+      "training_seconds": 219.40661315619946
+    },
+    {
+      "group": "hybrid_3_control",
+      "subject": 1,
+      "seed": 42,
+      "features": 43,
+      "model_slots": 44,
+      "r_thumb": 0.8177968525274695,
+      "r_index": 0.8641603564079291,
+      "r_middle": 0.8224675006737898,
+      "r_ring": 0.8771776832575598,
+      "r_little": 0.6687593956637004,
+      "r4": 0.7932960263182223,
+      "r5": 0.8100723577060898,
+      "mae4": 0.38383668672919813,
+      "mse4": 0.4061769321662689,
+      "samples": 200000,
+      "epochs": 112,
+      "parameters": 6808198,
+      "training_seconds": 242.39074167609215
+    },
+    {
+      "group": "hybrid_3_control",
+      "subject": 2,
+      "seed": 42,
+      "features": 43,
+      "model_slots": 44,
+      "r_thumb": 0.7804604760396749,
+      "r_index": 0.7941914588547753,
+      "r_middle": 0.6669786152919541,
+      "r_ring": 0.7411965080598283,
+      "r_little": 0.5351696066476116,
+      "r4": 0.6942000392085039,
+      "r5": 0.7035993329787689,
+      "mae4": 0.5503246437387159,
+      "mse4": 0.6539444324093117,
+      "samples": 200000,
+      "epochs": 69,
+      "parameters": 6808198,
+      "training_seconds": 144.9057067260146
+    },
+    {
+      "group": "hybrid_3_control",
+      "subject": 3,
+      "seed": 42,
+      "features": 43,
+      "model_slots": 44,
+      "r_thumb": 0.8563201291415516,
+      "r_index": 0.8014194904851594,
+      "r_middle": 0.7134864000436258,
+      "r_ring": 0.8554129173954564,
+      "r_little": 0.827877935180937,
+      "r4": 0.7997759887128185,
+      "r5": 0.8109033744493461,
+      "mae4": 0.3961225689510874,
+      "mse4": 0.3883696214349028,
+      "samples": 200000,
+      "epochs": 104,
+      "parameters": 6808198,
+      "training_seconds": 220.1263805925846
+    },
+    {
+      "group": "hybrid_4",
+      "subject": 1,
+      "seed": 42,
+      "features": 44,
+      "model_slots": 44,
+      "r_thumb": 0.8084566806419312,
+      "r_index": 0.880855321802215,
+      "r_middle": 0.8845795643980667,
+      "r_ring": 0.8762087006280425,
+      "r_little": 0.7783603367979263,
+      "r4": 0.8380629759100348,
+      "r5": 0.8456921208536363,
+      "mae4": 0.36893145054728027,
+      "mse4": 0.35277395974227527,
+      "samples": 200000,
+      "epochs": 112,
+      "parameters": 6808198,
+      "training_seconds": 234.31128042936325
+    },
+    {
+      "group": "hybrid_4",
+      "subject": 2,
+      "seed": 42,
+      "features": 44,
+      "model_slots": 44,
+      "r_thumb": 0.7776682898566475,
+      "r_index": 0.8010574183055031,
+      "r_middle": 0.6615294355828424,
+      "r_ring": 0.7365913881368711,
+      "r_little": 0.5449454705808789,
+      "r4": 0.696300153581468,
+      "r5": 0.7043584004925486,
+      "mae4": 0.5214794006296297,
+      "mse4": 0.6045866806896806,
+      "samples": 200000,
+      "epochs": 69,
+      "parameters": 6808198,
+      "training_seconds": 146.28784823417664
+    },
+    {
+      "group": "hybrid_4",
+      "subject": 3,
+      "seed": 42,
+      "features": 44,
+      "model_slots": 44,
+      "r_thumb": 0.8551356035400343,
+      "r_index": 0.7976732002884426,
+      "r_middle": 0.678136029160841,
+      "r_ring": 0.8512831507506401,
+      "r_little": 0.8207249010582305,
+      "r4": 0.7879174335118871,
+      "r5": 0.8005905769596378,
+      "mae4": 0.39774446381235307,
+      "mse4": 0.4019574747596657,
+      "samples": 200000,
+      "epochs": 104,
+      "parameters": 6808198,
+      "training_seconds": 183.42763843387365
+    }
+  ],
+  "means": {
+    "linear_morlet": {
+      "r4": 0.6839213130930414,
+      "r5": 0.6962257211888664,
+      "mae4": 0.47226434497154296,
+      "mse4": 0.5679231447624273
+    },
+    "hybrid_3_control": {
+      "r4": 0.7624240180798482,
+      "r5": 0.774858355044735,
+      "mae4": 0.4434279664730005,
+      "mse4": 0.4828303286701611
+    },
+    "hybrid_4": {
+      "r4": 0.7740935210011299,
+      "r5": 0.7835470327686075,
+      "mae4": 0.429385104996421,
+      "mse4": 0.4531060383972072
+    }
+  },
+  "comparison": [
+    {
+      "group": "morlet",
+      "label": "High Morlet only, log40",
+      "source": "previous completed experiment",
+      "r4": 0.7160496570160956,
+      "r5": 0.7272870012288412,
+      "mae4": 0.4584463976868482,
+      "mse4": 0.523025678829227
+    },
+    {
+      "group": "hybrid",
+      "label": "High Morlet + 3 signed bands, original",
+      "source": "previous completed experiment",
+      "r4": 0.7583730662365196,
+      "r5": 0.7714153324085733,
+      "mae4": 0.44543006867518037,
+      "mse4": 0.4869517065651083
+    },
+    {
+      "group": "morlet_broadband",
+      "label": "Broadband Morlet, log40",
+      "source": "previous completed experiment",
+      "r4": 0.39828881925166626,
+      "r5": 0.4221821547489222,
+      "mae4": 0.6285755627481668,
+      "mse4": 0.985464074528771
+    },
+    {
+      "group": "morlet_100",
+      "label": "Broadband Morlet, log100",
+      "source": "previous completed experiment",
+      "r4": 0.33652400515210834,
+      "r5": 0.36339908376476887,
+      "mae4": 0.6368587660640309,
+      "mse4": 1.0191292143229844
+    },
+    {
+      "group": "linear_morlet",
+      "label": "Linear Morlet, 40 centers",
+      "source": "new full training",
+      "r4": 0.6839213130930414,
+      "r5": 0.6962257211888664,
+      "mae4": 0.47226434497154296,
+      "mse4": 0.5679231447624273
+    },
+    {
+      "group": "hybrid_3_control",
+      "label": "Morlet + 3 signed bands (control)",
+      "source": "new full training",
+      "r4": 0.7624240180798482,
+      "r5": 0.774858355044735,
+      "mae4": 0.4434279664730005,
+      "mse4": 0.4828303286701611
+    },
+    {
+      "group": "hybrid_4",
+      "label": "Morlet + 4 signed bands",
+      "source": "new full training",
+      "r4": 0.7740935210011299,
+      "r5": 0.7835470327686075,
+      "mae4": 0.429385104996421,
+      "mse4": 0.4531060383972072
+    }
+  ],
+  "contrasts": [
+    {
+      "comparison": "four_minus_three_lowbands",
+      "subject": 1,
+      "delta_r4": 0.04476694959181249
+    },
+    {
+      "comparison": "four_minus_three_lowbands",
+      "subject": 2,
+      "delta_r4": 0.0021001143729640903
+    },
+    {
+      "comparison": "four_minus_three_lowbands",
+      "subject": 3,
+      "delta_r4": -0.011858555200931375
+    },
+    {
+      "comparison": "four_minus_three_lowbands",
+      "subject": "mean",
+      "delta_r4": 0.011669502921281771
+    },
+    {
+      "comparison": "linear_minus_morlet",
+      "subject": "mean",
+      "delta_r4": -0.03212834392305419
+    },
+    {
+      "comparison": "linear_minus_hybrid",
+      "subject": "mean",
+      "delta_r4": -0.07445175314347818
+    },
+    {
+      "comparison": "linear_minus_morlet_broadband",
+      "subject": "mean",
+      "delta_r4": 0.2856324938413751
+    },
+    {
+      "comparison": "linear_minus_morlet_100",
+      "subject": "mean",
+      "delta_r4": 0.34739730794093304
+    }
+  ],
+  "seed": 42,
+  "fresh_full_training_models": 9,
+  "labels_sha256": {
+    "1": "f4dd37941f0d878e87d9d7297ada0493b5a44874dbaa659472d048d4b7555dea",
+    "2": "fb902a3b63f7f53b41d6d548bbdd00f2164a239bd4e205e82042e3ffa3e3e8a4",
+    "3": "8216229b86f04e9b25648a11f431a735fabc777e7e308c0445e5c391525c4897"
+  },
+  "protocol_sha256": "2d2dcde68709f715a6ef21546cf94d7bc44ce5f6860daa2133d1e872d366822b",
+  "predictions_manifest_sha256": "2e51ca652d9e0c8d9d170dd7d3ec067aa8f47c14a2455906214079dc3c42d0ef",
+  "reference_summary_sha256": {
+    "original": "ca806a2d04594d91c14851dbc9365a325e3a1c5459263609b8343c0d62f001cd",
+    "broad40": "fa07d8f07c2a6b551ded684085c0f4d6cdd925b37f659c41f92fab92a3cb5c62",
+    "broad100": "3cfba3de49b87667326bd103525d45762e8013bda21510bf1c8143c015ccba88"
+  },
+  "primary_metric": "All 200000 original test points per subject; four fingers excluding ring; equal-subject mean",
+  "full_train_record_r4": {
+    "linear_morlet": 0.996364384321745,
+    "hybrid_3_control": 0.9954760097160916,
+    "hybrid_4": 0.9957859325153083
+  },
+  "best_new_group": "hybrid_4"
+}

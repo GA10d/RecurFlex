@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "models": 6,
+  "full_training_complete": true,
+  "full_test_records": 6,
+  "samples_per_record": 200000,
+  "paired_initialization_equal": true,
+  "original_nonstem_initialization_preserved": true,
+  "sample_windows_match_previous": true,
+  "weights_and_predictions_and_source_hashes_checked": true,
+  "shared_morlet_centers_match_previous": true,
+  "reference_40_scaling_exactly_preserved": true,
+  "independent_scipy_pearson_agrees": true,
+  "full_output_coverage_checked": true,
+  "means": {
+    "morlet_40": {
+      "r4": 0.3710240608238027,
+      "r5": 0.3956601533297494,
+      "mae4": 0.6255495764661761,
+      "mse4": 0.9762516858320808
+    },
+    "morlet_100": {
+      "r4": 0.33652400515210834,
+      "r5": 0.36339908376476887,
+      "mae4": 0.6368587660640309,
+      "mse4": 1.0191292143229844
+    }
+  }
+}

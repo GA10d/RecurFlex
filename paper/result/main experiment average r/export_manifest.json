@@ -1,0 +1,29 @@
+{
+  "features": 44,
+  "seed": 42,
+  "source_run": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Main Experiment\\runs\\main",
+  "source_prediction_manifest_sha256": "13c47a53adc427120764b3403c2e9c45ef08531c10f718cfc80b4d5bea728d06",
+  "files_sha256": {
+    "average_metrics.csv": "791b43150fe2109363fb842b90aadf97887c83a4f5ceeb3772dec1faf8d427d7",
+    "average_r.pdf": "7d5a88bbd75c4fe9bde8650642f5d5912961d7a13c089881f50a89a469b60af3",
+    "average_r.png": "287221f018196d69b6310722cfb83fdda49dacb9a4aee2eb84e4ad3260c3fb8d",
+    "average_r.svg": "701156bc213f9ee30ffa5dcef32addd422c45e9c0341cf01f7fe794637223ec7",
+    "experiment_config.json": "e5d93e6dc7ebaf81ce90b7c36b7b47105ce21a62010b691a02fe2c9cd695671c",
+    "finger_average_r.csv": "0b07c1b848bc7acc057f4d15b275a0442c37a9cf3a87db26754622a7cfbff0d6",
+    "paper_results.md": "6b9345635bc35a801e850f27189a9ee7ed6555367da1b280ecdfc0d71036329f",
+    "prediction_manifest.json": "9f4fdbf7548e154cc62c49ebc4953e2f1cbf3a8226e7723de61171385edf1cb7",
+    "README.md": "b5e490333fcc8dbbd1191795cd84d9754dd9313fb44706ce2b5641bc8fc98c55",
+    "reproduction_check.json": "0a4a68571dcc5f47e2dd8654781302b3467b6b9fdeb0bca78ca9a417af878354",
+    "source_prediction_manifest.json": "13c47a53adc427120764b3403c2e9c45ef08531c10f718cfc80b4d5bea728d06",
+    "subject_metrics.csv": "d5b14ebd9d960d8567ff76e9e3014a23edf72f684e59898ee0635ac0a06e1440",
+    "summary.json": "4028b4ba451c87b9296506c0c84e8ff49497f09494f6f6e1f1cecf80d4959ac9",
+    "training_smoke.json": "22255f39f4be92ee9716cb63ce2dd0bab7bb3bdfe4289e86335f19430885f101",
+    "weight_provenance.json": "a62f208df971fb7e75628eeb8d13c52ae4eee457ce53ac4bec09c3128a621374",
+    "coverage\\s1_coverage.json": "c8354e0f65404f535e6d86e3b817157621038b8c624e61791d881244a720fe9f",
+    "coverage\\s2_coverage.json": "c8354e0f65404f535e6d86e3b817157621038b8c624e61791d881244a720fe9f",
+    "coverage\\s3_coverage.json": "c8354e0f65404f535e6d86e3b817157621038b8c624e61791d881244a720fe9f",
+    "predictions\\s1_prediction.npz": "4f1868910fd110bcf6abf2f51e08590c170ff68110dd04c133651792195c03e2",
+    "predictions\\s2_prediction.npz": "01daa79b39b743313929c5c2979b55254d748cd14864c13aef40d0160b70de0f",
+    "predictions\\s3_prediction.npz": "9367d0aaadebfc33a6d85340e6b380acce8d18e8842a61dcc933d19a5fb116f8"
+  }
+}

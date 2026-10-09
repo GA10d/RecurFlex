@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "seed": 42,
+  "parameters": 6808198,
+  "features": 44,
+  "device": "cpu",
+  "training_output": [
+    2,
+    5,
+    512
+  ],
+  "inference_output": [
+    1,
+    5,
+    2048
+  ],
+  "gradient_branches_checked": 6,
+  "same_timestamp_pairing": true,
+  "full_block_coverage_lengths": [
+    512,
+    2048,
+    5000,
+    20000
+  ],
+  "single_checkpoint_subjects": [
+    1,
+    2,
+    3
+  ],
+  "training_only_statistics": true,
+  "signed_bands": [
+    [
+      0.5,
+      4
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      13
+    ],
+    [
+      13,
+      30
+    ]
+  ],
+  "shared_random_initialization_verified": true,
+  "selection_before_scaling_verified": true,
+  "real_training_minibatch": false
+}

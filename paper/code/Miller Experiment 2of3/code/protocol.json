@@ -1,0 +1,399 @@
+{
+  "experiment": "RecurFlex on Miller fingerflex: chronological two-thirds development, one-third test",
+  "subjects": [
+    "bp",
+    "cc",
+    "ht",
+    "jc",
+    "jp",
+    "mv",
+    "wc",
+    "wm",
+    "zt"
+  ],
+  "records": [
+    {
+      "subject": "bp",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\bp\\bp_fingerflex.mat",
+      "original_source_sha256": "b8222d13c15c97ec8590ed4b9ea180c639cac0b7c3e04bce178bb349f92be03a",
+      "source_samples": 610040,
+      "channels": 46,
+      "splits": {
+        "train_inner": [
+          0,
+          321720
+        ],
+        "val_inner": [
+          323720,
+          404680
+        ],
+        "train_full": [
+          0,
+          404680
+        ],
+        "test": [
+          406680,
+          610040
+        ],
+        "outer_gap": [
+          404680,
+          406680
+        ],
+        "inner_gap": [
+          321720,
+          323720
+        ]
+      },
+      "upload_file": "bp.npz",
+      "upload_bytes": 59864706,
+      "upload_sha256": "2e896c77ade96f0e3f6dd692e30bdfa2c291f349013fe136a1dbcbe376cb1660",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\bp.npy",
+      "local_test_labels_sha256": "8bec320e557580d4dea3012d9b7e36c79eb102099d01a2c8e532d7959f2fa449"
+    },
+    {
+      "subject": "cc",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\cc\\cc_fingerflex.mat",
+      "original_source_sha256": "ef6f6e87d6ce9fbb3a1719838ad1fccc51a7b983b8cb61c1e3d0d0acab281248",
+      "source_samples": 610040,
+      "channels": 63,
+      "splits": {
+        "train_inner": [
+          0,
+          321720
+        ],
+        "val_inner": [
+          323720,
+          404680
+        ],
+        "train_full": [
+          0,
+          404680
+        ],
+        "test": [
+          406680,
+          610040
+        ],
+        "outer_gap": [
+          404680,
+          406680
+        ],
+        "inner_gap": [
+          321720,
+          323720
+        ]
+      },
+      "upload_file": "cc.npz",
+      "upload_bytes": 82534069,
+      "upload_sha256": "4194e1d8a073be6401ccfb1a2f7ba53b7fbc6ceb2a51bc16518bfbdbaa4c073d",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\cc.npy",
+      "local_test_labels_sha256": "fe499665a7ba4f5cea7cde5d8fa7c179e57eab3fb0f6223cdc50e71335b2d388"
+    },
+    {
+      "subject": "ht",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\ht\\ht_fingerflex.mat",
+      "original_source_sha256": "ab0c08401599a637bf614d9eb8adc0eb7adeb0a0b0125808fd4bd52c73060106",
+      "source_samples": 610040,
+      "channels": 64,
+      "splits": {
+        "train_inner": [
+          0,
+          321720
+        ],
+        "val_inner": [
+          323720,
+          404680
+        ],
+        "train_full": [
+          0,
+          404680
+        ],
+        "test": [
+          406680,
+          610040
+        ],
+        "outer_gap": [
+          404680,
+          406680
+        ],
+        "inner_gap": [
+          321720,
+          323720
+        ]
+      },
+      "upload_file": "ht.npz",
+      "upload_bytes": 83947837,
+      "upload_sha256": "6fd898dbc2e18f8bb1137c040a502e56c503e3cb8d1cfd4b872107a62c4c3547",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\ht.npy",
+      "local_test_labels_sha256": "9510eefb3e78e90c549b1bdcfc958284da14dc90d64fe44547d5f5948dc81972"
+    },
+    {
+      "subject": "jc",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\jc\\jc_fingerflex.mat",
+      "original_source_sha256": "d764fc3ec03f3733eb82d8839ad568b098803c446ae26decd36982f555b7646d",
+      "source_samples": 530440,
+      "channels": 47,
+      "splits": {
+        "train_inner": [
+          0,
+          279280
+        ],
+        "val_inner": [
+          281280,
+          351600
+        ],
+        "train_full": [
+          0,
+          351600
+        ],
+        "test": [
+          353600,
+          530440
+        ],
+        "outer_gap": [
+          351600,
+          353600
+        ],
+        "inner_gap": [
+          279280,
+          281280
+        ]
+      },
+      "upload_file": "jc.npz",
+      "upload_bytes": 54569125,
+      "upload_sha256": "eb27c2d9e8af4bdb1d1edd9367577d055221f2cacdf600f955a9ac23183159ac",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\jc.npy",
+      "local_test_labels_sha256": "d184ebdfaa81b8170e3775554a08ade5caf5b0326db54ea4d4577ed670da4c74"
+    },
+    {
+      "subject": "jp",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\jp\\jp_fingerflex.mat",
+      "original_source_sha256": "3c077022eee8ce210f72958d6a815a4b340249ec0d90d477e7962f897b39e494",
+      "source_samples": 465840,
+      "channels": 58,
+      "splits": {
+        "train_inner": [
+          0,
+          244840
+        ],
+        "val_inner": [
+          246840,
+          308560
+        ],
+        "train_full": [
+          0,
+          308560
+        ],
+        "test": [
+          310560,
+          465840
+        ],
+        "outer_gap": [
+          308560,
+          310560
+        ],
+        "inner_gap": [
+          244840,
+          246840
+        ]
+      },
+      "upload_file": "jp.npz",
+      "upload_bytes": 48512502,
+      "upload_sha256": "8ff59cb5ce5748630999ff49936b657d524536656cf12b4d344b78ede4b787a7",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\jp.npy",
+      "local_test_labels_sha256": "9e12f71f29ce873d40350e3fb2dda55fc5c261a6ca6ecf4ced5db138a021d2a0"
+    },
+    {
+      "subject": "mv",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\mv\\mv_fingerflex.mat",
+      "original_source_sha256": "5787d8aaa87b366d769fb666929f775c6862948f3ff99ee15f9d4fbe103a38ae",
+      "source_samples": 178960,
+      "channels": 43,
+      "splits": {
+        "train_inner": [
+          0,
+          91800
+        ],
+        "val_inner": [
+          93800,
+          117280
+        ],
+        "train_full": [
+          0,
+          117280
+        ],
+        "test": [
+          119280,
+          178960
+        ],
+        "outer_gap": [
+          117280,
+          119280
+        ],
+        "inner_gap": [
+          91800,
+          93800
+        ]
+      },
+      "upload_file": "mv.npz",
+      "upload_bytes": 16802905,
+      "upload_sha256": "2e630568d74786a01181cfbe715b9ff456f3f91c5cad33e6650da4d5a4e840bc",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\mv.npy",
+      "local_test_labels_sha256": "30f6d74e35a44576dcdbc0f1988788517541af2ce0e603d74d57bbbec05ee08c"
+    },
+    {
+      "subject": "wc",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\wc\\wc_fingerflex.mat",
+      "original_source_sha256": "1579f46bc31ca748fdd4e6d309183a1c69e43c293885a9dc7728661bdbc39f8c",
+      "source_samples": 610040,
+      "channels": 64,
+      "splits": {
+        "train_inner": [
+          0,
+          321720
+        ],
+        "val_inner": [
+          323720,
+          404680
+        ],
+        "train_full": [
+          0,
+          404680
+        ],
+        "test": [
+          406680,
+          610040
+        ],
+        "outer_gap": [
+          404680,
+          406680
+        ],
+        "inner_gap": [
+          321720,
+          323720
+        ]
+      },
+      "upload_file": "wc.npz",
+      "upload_bytes": 84432164,
+      "upload_sha256": "f28581a2aa424a8d325c056666e60fe5a80e8bff42e145e5cef738b37c460196",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\wc.npy",
+      "local_test_labels_sha256": "90c39064384c4b8dd6176681e14095df9d2a7acc4e7d4562e31f6ec0b2cbb3a3"
+    },
+    {
+      "subject": "wm",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\wm\\wm_fingerflex.mat",
+      "original_source_sha256": "d4da45f4b5f2edcce8bb5a7a24abb124d26fd33667d2febcea5eeff5e528927c",
+      "source_samples": 444840,
+      "channels": 38,
+      "splits": {
+        "train_inner": [
+          0,
+          233640
+        ],
+        "val_inner": [
+          235640,
+          294560
+        ],
+        "train_full": [
+          0,
+          294560
+        ],
+        "test": [
+          296560,
+          444840
+        ],
+        "outer_gap": [
+          294560,
+          296560
+        ],
+        "inner_gap": [
+          233640,
+          235640
+        ]
+      },
+      "upload_file": "wm.npz",
+      "upload_bytes": 30362267,
+      "upload_sha256": "778a958f94e9d7d4f341a19c68218a7365bd21fce48597886211e211f8ebf1f1",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\wm.npy",
+      "local_test_labels_sha256": "e79dc6e0178926cd2f14ff153ea02e7a2833486c218c63c2c0cc96547e529052"
+    },
+    {
+      "subject": "zt",
+      "original_source": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\data\\Miller_ECoG_Library\\extracted\\fingerflex\\fingerflex\\data\\zt\\zt_fingerflex.mat",
+      "original_source_sha256": "7d7d301a2ce4e218089b8c12ea8f3411fa6d447dcb02614e9e585d49f981121f",
+      "source_samples": 610040,
+      "channels": 61,
+      "splits": {
+        "train_inner": [
+          0,
+          321720
+        ],
+        "val_inner": [
+          323720,
+          404680
+        ],
+        "train_full": [
+          0,
+          404680
+        ],
+        "test": [
+          406680,
+          610040
+        ],
+        "outer_gap": [
+          404680,
+          406680
+        ],
+        "inner_gap": [
+          321720,
+          323720
+        ]
+      },
+      "upload_file": "zt.npz",
+      "upload_bytes": 81536916,
+      "upload_sha256": "ca5b46563f7b35f6d8ff38739a36ba54d7f53274f36aed2c044f1113b02be47e",
+      "local_test_labels": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 2of3\\local_test_labels\\zt.npy",
+      "local_test_labels_sha256": "f0b60f4d7f9004fcdaa0aa10a802e8cd62d3d720faeab092e3b825b1015e74ba"
+    }
+  ],
+  "seed": 42,
+  "features": 44,
+  "electrodes": 16,
+  "parameters": 6808198,
+  "train_window": 512,
+  "inference_window": 2048,
+  "inference_stride": 2048,
+  "batch": 64,
+  "windows_per_epoch": 8192,
+  "max_validation_epochs": 100,
+  "patience": 25,
+  "full_budget_rule": "clip(round(best_inner_epoch * development_samples / inner_training_samples), 8, 160)",
+  "optimizer": "AdamW",
+  "lr": 8.42e-05,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "loss": "0.5*MSE + 0.5*(1-temporal cosine)",
+  "outer_split": "last one-third test; first two-thirds development minus 2000-sample gap; boundary floored to 40 samples",
+  "inner_split": "last 20% of development validation; preceding inner training with 2000-sample gap",
+  "split_alignment_samples": 40,
+  "split_guard_samples": 2000,
+  "channel_selection": "same-time training-only maximum absolute correlation; refit on development for final model",
+  "preprocessing": "unchanged Main Experiment raw_features applied separately to each split",
+  "evaluation": "all original 1000Hz test samples; r5 all fingers for literature comparison; r4 retained; validation selection uses r4; equal subject mean",
+  "test_labels_uploaded": false,
+  "workers": 2,
+  "split_fraction_numerator": 2,
+  "split_fraction_denominator": 3,
+  "prior_experiment": "../Miller Experiment",
+  "initialization": "fresh seed-42 training_model; no old checkpoints loaded",
+  "remote_root": "/root/autodl-tmp/bci_miller_fingerflex_2of3_20261008",
+  "python": "/root/autodl-tmp/bci_backbones_20261008/venv/bin/python",
+  "source_sha256": {
+    "config.py": "14ab8cfa18624e0eee10c2d1f1e9ae2846b34a695d0fc1216e302cc814f33481",
+    "data.py": "20d3e27ce914affa903e39193583efc04ea944cb17c6e5b772ede0f285cf9d2a",
+    "model.py": "d674240b8f9c867bba554e9b5aab71a9384c6734c7180519edfe92e198f8a2be",
+    "inference.py": "1147c0154b7435e3ba4054e98e3a389a16d68e9f6d8aa1d272e8b7d52dda50a0",
+    "train.py": "fa35ac51a63b2862a6a932a969ee0b6ebf7eb00bc93eea7e2d400af0fe0d55fc",
+    "metrics.py": "b0901c8dc34a0dfbad1df4b64b28ff0f8bce436c910e747260cb2ff1c3d2f265",
+    "utils.py": "bf15e981289d9454424b69601c4906a554a88db4914f8ed3134543931a72981b"
+  }
+}

@@ -1,0 +1,5 @@
+first,second,subject,delta_r4,delta_r5
+morlet_broadband,signed_logbank,1,0.11827945788213784,0.10326855864055784
+morlet_broadband,signed_logbank,2,0.0681407689466845,0.08038724938085418
+morlet_broadband,signed_logbank,3,-0.056973290413653954,-0.08210286462965255
+morlet_broadband,signed_logbank,mean,0.04314897880505614,0.03385098113058649

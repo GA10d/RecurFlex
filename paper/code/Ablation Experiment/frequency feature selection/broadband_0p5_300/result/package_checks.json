@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "full_training_models": 6,
+  "full_test_records": 6,
+  "samples_per_test_record": 200000,
+  "all_python_source_parses": true,
+  "notebook_executed_without_errors": true,
+  "notebook_code_cells": 4,
+  "embedded_figures": 4,
+  "figures_visually_inspected": true,
+  "independent_scipy_pearson_agrees": true,
+  "train_record_diagnostics_complete": true,
+  "delivered_artifact_sha256": {
+    "README.md": "2a7dca0ee6d66e5a816607872033758ceaa1e4dfc6befb61ab5a542e72b893e1",
+    "code/protocol.json": "e218f4402845b98f13edcfe7bc615cfe2bb65b1e4963906ae96a57f2606d024d",
+    "code/results.ipynb": "d45f19c8ec78e1249567c41fb665a15a7e738122ebd67e09e8df838a550e2722",
+    "result/report.md": "c5fb9558bb66749ba810a73f2b21851313feef3e3a3b23fac5d9b4aef917f40a",
+    "result/summary.json": "fa07d8f07c2a6b551ded684085c0f4d6cdd925b37f659c41f92fab92a3cb5c62",
+    "result/mean_metrics.csv": "92412d974338ce40e48f9afd6afee880f70c14a250c44312f06fb7acefce6203",
+    "result/subject_metrics.csv": "b4a0dbc8c2b144b53b571ed4333b400b81549e3f68a13d1de2ecbc9f1885d74a",
+    "result/all_feature_comparison.csv": "1dfd3daa2c2a55b4e3824e7be1b1851b871f80f03099b76ab9e879438a8a8a53",
+    "result/broadband_comparison.png": "8c3565bda7057c1e61489fd16f06efc70a6a3cec96dee99203de36f37ff3f5a0",
+    "result/all_feature_comparison.png": "18953a299f48980817cb6c419f3549e63230bbf78fa510248df9002c920fbd6b",
+    "result/frequency_design.png": "84e4b4de7e4c2e67e0d58fc023ad1f406effdf67a37e279c16b045776b2df201",
+    "result/training_curves.png": "f069d041241cb8a8304dd61f5e2841cedb1028d1d7030e28beef0b81fca6487b",
+    "result/train_diagnostics.json": "ab07063aef437e178e3516af3d7d1bae726d8d52007e68e6cf43a7526a66ed15"
+  }
+}

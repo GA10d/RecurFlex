@@ -1,0 +1,170 @@
+{
+  "subjects": [
+    {
+      "subject": "bp",
+      "old_test_r5": 0.7125713779574359,
+      "new_test_r5": 0.6993236973632142,
+      "common_tail_new_r5": 0.7618615089212222,
+      "old_test_r4": 0.7061100643137329,
+      "new_test_r4": 0.699900768085268,
+      "common_tail_new_r4": 0.7677965425687059,
+      "old_test_raw_indices": [
+        488000,
+        610040
+      ],
+      "new_test_raw_indices": [
+        406680,
+        610040
+      ]
+    },
+    {
+      "subject": "cc",
+      "old_test_r5": 0.8306135992079305,
+      "new_test_r5": 0.7557690148356523,
+      "common_tail_new_r5": 0.7750632311819484,
+      "old_test_r4": 0.8242876124178881,
+      "new_test_r4": 0.7435147410140179,
+      "common_tail_new_r4": 0.7703095843587354,
+      "old_test_raw_indices": [
+        488000,
+        610040
+      ],
+      "new_test_raw_indices": [
+        406680,
+        610040
+      ]
+    },
+    {
+      "subject": "ht",
+      "old_test_r5": 0.46773448262171885,
+      "new_test_r5": 0.541090842831695,
+      "common_tail_new_r5": 0.4962083999416601,
+      "old_test_r4": 0.4646570972877856,
+      "new_test_r4": 0.5217624746805268,
+      "common_tail_new_r4": 0.507613680648693,
+      "old_test_raw_indices": [
+        488000,
+        610040
+      ],
+      "new_test_raw_indices": [
+        406680,
+        610040
+      ]
+    },
+    {
+      "subject": "jc",
+      "old_test_r5": 0.681124250654158,
+      "new_test_r5": 0.6632831883390544,
+      "common_tail_new_r5": 0.6826101306535926,
+      "old_test_r4": 0.6676946513281549,
+      "new_test_r4": 0.6770653899795116,
+      "common_tail_new_r4": 0.6893854450637553,
+      "old_test_raw_indices": [
+        424320,
+        530440
+      ],
+      "new_test_raw_indices": [
+        353600,
+        530440
+      ]
+    },
+    {
+      "subject": "jp",
+      "old_test_r5": 0.6748600503951889,
+      "new_test_r5": 0.631042665732751,
+      "common_tail_new_r5": 0.6583006313809652,
+      "old_test_r4": 0.6737396373969239,
+      "new_test_r4": 0.6162774126849806,
+      "common_tail_new_r4": 0.6388014885081988,
+      "old_test_raw_indices": [
+        372640,
+        465840
+      ],
+      "new_test_raw_indices": [
+        310560,
+        465840
+      ]
+    },
+    {
+      "subject": "mv",
+      "old_test_r5": 0.8088013169753729,
+      "new_test_r5": 0.8696714319875533,
+      "common_tail_new_r5": 0.8592284434392775,
+      "old_test_r4": 0.8195098039144963,
+      "new_test_r4": 0.8812043285474562,
+      "common_tail_new_r4": 0.859737904135618,
+      "old_test_raw_indices": [
+        143160,
+        178960
+      ],
+      "new_test_raw_indices": [
+        119280,
+        178960
+      ]
+    },
+    {
+      "subject": "wc",
+      "old_test_r5": 0.5751059820768788,
+      "new_test_r5": 0.5915521791245737,
+      "common_tail_new_r5": 0.5668443081700179,
+      "old_test_r4": 0.5894396811163892,
+      "new_test_r4": 0.6166943500068557,
+      "common_tail_new_r4": 0.5846909819404718,
+      "old_test_raw_indices": [
+        488000,
+        610040
+      ],
+      "new_test_raw_indices": [
+        406680,
+        610040
+      ]
+    },
+    {
+      "subject": "wm",
+      "old_test_r5": 0.21606023459185852,
+      "new_test_r5": 0.25894125343584395,
+      "common_tail_new_r5": 0.18903384550891594,
+      "old_test_r4": 0.15226172665708654,
+      "new_test_r4": 0.21210164678877252,
+      "common_tail_new_r4": 0.16566677076658537,
+      "old_test_raw_indices": [
+        355840,
+        444840
+      ],
+      "new_test_raw_indices": [
+        296560,
+        444840
+      ]
+    },
+    {
+      "subject": "zt",
+      "old_test_r5": 0.8209467810717618,
+      "new_test_r5": 0.7779514113878614,
+      "common_tail_new_r5": 0.798549993972834,
+      "old_test_r4": 0.8141362786308676,
+      "new_test_r4": 0.7675913321491428,
+      "common_tail_new_r4": 0.7966916838670709,
+      "old_test_raw_indices": [
+        488000,
+        610040
+      ],
+      "new_test_raw_indices": [
+        406680,
+        610040
+      ]
+    }
+  ],
+  "average": {
+    "old_test_r5": 0.6430908972835894,
+    "new_test_r5": 0.643180631670911,
+    "common_tail_new_r5": 0.6430778325744927,
+    "old_test_r4": 0.634648505895925,
+    "new_test_r4": 0.6373458271040592,
+    "common_tail_new_r4": 0.6422993424286483
+  },
+  "resolved_prior_experiment": "F:\\Documents\\GitHub\\BCI_Study\\Decode Learning\\Games\\01_BCI_IV_4_Finger_Flexion\\paper\\code\\Miller Experiment 4of5",
+  "old_results_sha256": "2338400593cb26e1faa62c01116aea19d3ec4e352d3f18fda6684ac0bfcb6f71",
+  "new_results_sha256": "02d3033e2ed9cc2fec47d5d83615c25546de70d51d93240134a0a06c23e24e77",
+  "all_common_tail_labels_identical": true,
+  "interpretation": "Full-test comparisons change both training amount and test period. Common-tail comparison matches target time points; inference block boundaries and segment normalization still differ. No statistical significance inferred."
+}

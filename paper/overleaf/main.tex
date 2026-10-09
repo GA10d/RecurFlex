@@ -1,0 +1,58 @@
+% RecurFlex preprint. Compile with pdfLaTeX in Overleaf.
+% IEEE conference template linked by the EMBC 2027 Call for Papers.
+% Main entry point: edit manuscript text in sections/*.tex.
+% Figure float/caption: figures/architecture_figure.tex; TikZ source is shared.
+% Tables are in tables/*.tex; references are in sections/06_references.tex.
+% EMBC 2027: at most four technical pages; an optional fifth page is references only.
+\documentclass[conference,letterpaper,10pt]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array}
+\usepackage{helvet}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\definecolor{featureblue}{RGB}{40,87,132}
+\definecolor{contextgreen}{RGB}{36,110,87}
+\newcommand{\rFour}{\ensuremath{\bar r_{4}}}
+\newcommand{\rFive}{\ensuremath{\bar r_{5}}}
+\newcommand{\HF}{\ensuremath{\mathrm{HF}}}
+\newcommand{\LF}{\ensuremath{\mathrm{LF}}}
+
+\title{RecurFlex: Multiband Recurrent Decoding of\\
+Finger Trajectories from ECoG}
+
+\author{
+\IEEEauthorblockN{Zhewen Guo}
+\IEEEauthorblockA{Columbia University\\
+New York, NY, USA\\
+zg2567@columbia.edu}
+\and
+\IEEEauthorblockN{Hongxun Peng}
+\IEEEauthorblockA{Beihang University\\
+Beijing, China\\
+huxley329@buaa.edu.cn}
+\thanks{Corresponding author: Zhewen Guo (zg2567@columbia.edu).}
+}
+
+\begin{document}
+\maketitle
+
+% Input preserves the original order without forced chapter page breaks.
+\input{sections/00_abstract}
+
+\input{sections/01_introduction}
+
+\input{sections/02_related_work}
+
+\input{sections/03_method}
+
+\input{sections/04_results}
+
+\input{sections/05_conclusion}
+
+\input{sections/06_references}
+
+\end{document}

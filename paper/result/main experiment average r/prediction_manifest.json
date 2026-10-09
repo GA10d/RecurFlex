@@ -1,0 +1,68 @@
+{
+  "seed": 42,
+  "features": 44,
+  "model": "RecurFlex high Morlet + signed delta/theta/alpha/beta",
+  "predictions": [
+    {
+      "subject": 1,
+      "prediction": "predictions/s1_prediction.npz",
+      "prediction_sha256": "4f1868910fd110bcf6abf2f51e08590c170ff68110dd04c133651792195c03e2",
+      "model_sha256": "875c0acabd6b2266eaaea454594fb827359b2f70a70c1b8ba286de01e766e354",
+      "scalers_sha256": "3b845b9e71a3513874f789128203d0df0ba944f8e9b7d8aad8be95dd6173bfa0",
+      "shape_100hz": [
+        20000,
+        5
+      ],
+      "shape_1000hz": [
+        200000,
+        5
+      ],
+      "seed": 42
+    },
+    {
+      "subject": 2,
+      "prediction": "predictions/s2_prediction.npz",
+      "prediction_sha256": "01daa79b39b743313929c5c2979b55254d748cd14864c13aef40d0160b70de0f",
+      "model_sha256": "742409e26ce3a17004f06b8da4f90e9853cd334d40481152cdc6deb2f2e43803",
+      "scalers_sha256": "31e1be0b1fdcff466a5355acdb8ac4e2a3a9ec8d090c1c944f32b190ee30c71f",
+      "shape_100hz": [
+        20000,
+        5
+      ],
+      "shape_1000hz": [
+        200000,
+        5
+      ],
+      "seed": 42
+    },
+    {
+      "subject": 3,
+      "prediction": "predictions/s3_prediction.npz",
+      "prediction_sha256": "9367d0aaadebfc33a6d85340e6b380acce8d18e8842a61dcc933d19a5fb116f8",
+      "model_sha256": "a426441bc5b3050e8627729873243b7d69cdd68fdd0bd33d44d8c307e4b606f7",
+      "scalers_sha256": "689a00647d41d2b597b59ccb4fc77214016ec526e0ea3228b51ccf4878f3c0fb",
+      "shape_100hz": [
+        20000,
+        5
+      ],
+      "shape_1000hz": [
+        200000,
+        5
+      ],
+      "seed": 42
+    }
+  ],
+  "source_sha256": {
+    "config.py": "14ab8cfa18624e0eee10c2d1f1e9ae2846b34a695d0fc1216e302cc814f33481",
+    "data.py": "20d3e27ce914affa903e39193583efc04ea944cb17c6e5b772ede0f285cf9d2a",
+    "evaluate.py": "bc7916ceb0bbaa5474b202b2ee7ef43785ede347f14420718e306f1decaa81c9",
+    "export_results.py": "267db38f4be4d14d795ca3c88fff27facf187b67a1cb13234b3b3d301d621ccd",
+    "inference.py": "1147c0154b7435e3ba4054e98e3a389a16d68e9f6d8aa1d272e8b7d52dda50a0",
+    "main.py": "394d39f7020dd8043d082a70a8c2a87b8434d9f3e3e038d01c07c92e1b840811",
+    "metrics.py": "b0901c8dc34a0dfbad1df4b64b28ff0f8bce436c910e747260cb2ff1c3d2f265",
+    "model.py": "d674240b8f9c867bba554e9b5aab71a9384c6734c7180519edfe92e198f8a2be",
+    "train.py": "fa35ac51a63b2862a6a932a969ee0b6ebf7eb00bc93eea7e2d400af0fe0d55fc",
+    "utils.py": "bf15e981289d9454424b69601c4906a554a88db4914f8ed3134543931a72981b",
+    "verify.py": "096d2a94835b551ffdefc220ab683831e52ddc1d77691c90b15d67e2c2b16ef6"
+  }
+}

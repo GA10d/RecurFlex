@@ -1,0 +1,43 @@
+\section{Method}
+\subsection{Multiband ECoG Representation}
+Let $x_c[n]$ denote the 1,000-Hz ECoG signal at electrode $c$. For each independently processed recording segment, we standardize each electrode by that segment's mean and standard deviation, then subtract the pointwise median across all available electrodes. Segment-level standardization uses unlabeled ECoG from the complete segment, including a complete test segment at inference. All subsequent supervised electrode selection and feature/target scaling use training data.
+
+The high-frequency branch applies a 40--300-Hz FIR bandpass and notches at 60-Hz harmonics below 500~Hz. We compute seven-cycle Morlet power at 40 logarithmically spaced centers,
+\begin{equation}
+f_k=40\left(\frac{300}{40}\right)^{k/39},\qquad k=0,\ldots,39,
+\end{equation}
+with FFT convolution, non-zero-mean wavelets, and decimation by ten. The low-frequency branch operates on the referenced signal before the high-frequency bandpass. Fourth-order, zero-phase Butterworth filters extract $[0.5,4]$, $[4,8]$, $[8,13]$, and $[13,30]$~Hz waveforms. Their signed outputs, also sampled every ten points, retain polarity instead of converting voltage to power.
+
+The resulting 100-Hz representation contains 44 features per electrode. Sixteen training-derived electrodes are retained. For electrode selection, we rank each electrode by maximum absolute same-time feature/target correlation over the four scored fingers, sampling the training interior every five points; final BCI runs retain their fixed training-derived sets. Features are centered and scaled independently per electrode and feature using a training-fitted RobustScaler with percentile range $(0.1,0.9)$ and unit-variance correction. These settings denote the 0.1st and 0.9th percentiles. Signed low-frequency features are multiplied by 200 after scaling; power features have unit gain. Fitting excludes the first 225 and last 25 points of the 100-Hz training segment to reduce preprocessing-edge influence. Test features reuse these fitted statistics.
+
+Training targets are reconstructed from every 40th point of the stored 1,000-Hz glove signal, corresponding to its 25-Hz support. We append the final support value and use cubic interpolation to 100~Hz. Each target is then scaled using its training-interior minimum and range. Input and target windows use identical time indices; no explicit temporal offset is introduced.
+
+
+
+\subsection{Temporal Encoder--Decoder with Recurrent Context}
+The input $\mathbf X\in\mathbb R^{B\times16\times44\times T}$ is flattened across electrodes and features. A width-three convolution reduces 704 channels to 64. Five encoder stages use output widths $(64,128,256,512,512)$, kernels $(7,7,5,5,5)$, dilations $(1,2,3,1,2)$, and factor-two max pooling. Each convolution block has same padding, channel-wise layer normalization at each time point, GELU activation, and dropout of 0.1. The bottleneck is $\mathbf Z\in\mathbb R^{B\times512\times T/32}$.
+
+We normalize the bottleneck channels and apply a single-layer BiGRU with 128 hidden units in each direction. A linear projection maps its 256-dimensional output back to 512 channels. The residual update is
+\begin{equation}
+\widetilde{\mathbf Z}=\mathbf Z+g\,\operatorname{Proj}
+\bigl(\operatorname{BiGRU}(\operatorname{LN}(\mathbf Z))\bigr),
+\end{equation}
+where $\operatorname{Proj}$ is a learned affine projection, time/channel axes are transposed for recurrence, and the learned scalar $g$ starts at 0.1. This concentrates recurrent computation on the compressed time axis while preserving the convolutional residual path.
+
+Five mirrored decoder stages use convolution blocks followed by width-two, stride-two transposed convolutions. At each scale, the upsampled output is concatenated with the corresponding encoder feature. A final $1\times1$ convolution maps 128 channels to five trajectories at the input resolution. The model has 6,808,198 trainable parameters; $T$ is divisible by 32. Figure~\ref{fig:model} summarizes the architecture.
+
+\subsection{Learning and Continuous Reconstruction}
+We train one seed-42 model per subject with random 512-point windows (5.12~s), batch size 64, and 8,192 sampled windows per epoch. For normalized prediction $\hat{\mathbf y}_{bf}$ and target $\mathbf y_{bf}$ along a window's time axis, the objective is
+\begin{equation}
+\begin{split}
+\mathcal L={}&\frac{\|\hat{\mathbf Y}-\mathbf Y\|_F^2}{2\cdot5BT}\\
+&+\frac{1}{2\cdot5B}\sum_{b,f}
+\left(1-\frac{\langle\hat{\mathbf y}_{bf},\mathbf y_{bf}\rangle}
+{\max(\|\hat{\mathbf y}_{bf}\|_2,\epsilon)\max(\|\mathbf y_{bf}\|_2,\epsilon)}\right).
+\end{split}
+\end{equation}
+Here $\epsilon=10^{-8}$, as in the implemented cosine similarity. AdamW uses learning rate $8.42\times10^{-5}$, weight decay $10^{-4}$, and gradient-norm clipping at one. Training starts from random weights, with shared tensors initialized consistently across feature controls and the added alpha slot initialized afresh. No pretrained weights are used.
+
+Inference uses consecutive, non-overlapping 2,048-point blocks (20.48~s). Every output is retained, the final incomplete block is reflection-padded and trimmed, and GRU state starts at zero in each block. Predictions are inverse-scaled to glove units and linearly interpolated to the stored 1,000-Hz axis; samples beyond the final 100-Hz support use its endpoint value. No ensemble, Gaussian smoothing, amplitude calibration, output floor, or clipping is applied.
+
+Centered preprocessing, segment-wide normalization, and bidirectional recurrence use future ECoG; RecurFlex therefore performs offline reconstruction.

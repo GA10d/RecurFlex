@@ -1,0 +1,202 @@
+{
+  "subjects": [
+    {
+      "group": "morlet_broadband",
+      "subject": 1,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 1,
+      "r_thumb": 0.5068806451828178,
+      "r_index": 0.598658433882067,
+      "r_middle": 0.05187719427952598,
+      "r_ring": 0.48066346216612327,
+      "r_little": 0.26264127066703524,
+      "r4": 0.3550143860028615,
+      "r5": 0.3801442012355138,
+      "mae4": 0.6056099352330442,
+      "mse4": 1.008102691954383,
+      "samples": 200000,
+      "epochs": 112,
+      "parameters": 6805126,
+      "training_seconds": 243.04056457430124
+    },
+    {
+      "group": "morlet_broadband",
+      "subject": 2,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 1,
+      "r_thumb": 0.4267284974739249,
+      "r_index": 0.46450922968037844,
+      "r_middle": 0.1969591259561924,
+      "r_ring": 0.5504729667159168,
+      "r_little": 0.1792543022675629,
+      "r4": 0.3168627888445147,
+      "r5": 0.3635848244187951,
+      "mae4": 0.6891072431045067,
+      "mse4": 1.1311812975989919,
+      "samples": 200000,
+      "epochs": 69,
+      "parameters": 6805126,
+      "training_seconds": 147.69025803357363
+    },
+    {
+      "group": "morlet_broadband",
+      "subject": 3,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 1,
+      "r_thumb": 0.5262614034409072,
+      "r_index": 0.4732474783094051,
+      "r_middle": 0.4043245621520713,
+      "r_ring": 0.5221300613317981,
+      "r_little": 0.688123687728107,
+      "r4": 0.5229892829076226,
+      "r5": 0.5228174385924577,
+      "mae4": 0.5910095099069497,
+      "mse4": 0.8171082340329382,
+      "samples": 200000,
+      "epochs": 104,
+      "parameters": 6805126,
+      "training_seconds": 220.67852909117937
+    },
+    {
+      "group": "signed_logbank",
+      "subject": 1,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 200,
+      "r_thumb": 0.2997766032416241,
+      "r_index": 0.19336030552143063,
+      "r_middle": 0.24021430473103966,
+      "r_ring": 0.4374385004918848,
+      "r_little": 0.21358849898880033,
+      "r4": 0.23673492812072366,
+      "r5": 0.27687564259495595,
+      "mae4": 0.6406780352465336,
+      "mse4": 1.0918962302710529,
+      "samples": 200000,
+      "epochs": 112,
+      "parameters": 6805126,
+      "training_seconds": 241.55351823568344
+    },
+    {
+      "group": "signed_logbank",
+      "subject": 2,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 200,
+      "r_thumb": 0.4108052802289974,
+      "r_index": 0.31293538517964553,
+      "r_middle": 0.14551226953496915,
+      "r_ring": 0.421099795598384,
+      "r_little": 0.12563514464770872,
+      "r4": 0.2487220198978302,
+      "r5": 0.2831975750379409,
+      "mae4": 0.7143176133786123,
+      "mse4": 1.248935328959523,
+      "samples": 200000,
+      "epochs": 69,
+      "parameters": 6805126,
+      "training_seconds": 148.27564011514187
+    },
+    {
+      "group": "signed_logbank",
+      "subject": 3,
+      "seed": 42,
+      "active_features": 40,
+      "input_gain": 200,
+      "r_thumb": 0.6781074863240216,
+      "r_index": 0.581320309749242,
+      "r_middle": 0.5731455349970279,
+      "r_ring": 0.704751222825445,
+      "r_little": 0.4872769622148144,
+      "r4": 0.5799625733212765,
+      "r5": 0.6049203032221102,
+      "mae4": 0.5138781942231463,
+      "mse4": 0.6497694138570453,
+      "samples": 200000,
+      "epochs": 104,
+      "parameters": 6805126,
+      "training_seconds": 220.41330979019403
+    }
+  ],
+  "means": {
+    "morlet_broadband": {
+      "r4": 0.39828881925166626,
+      "r5": 0.4221821547489222,
+      "mae4": 0.6285755627481668,
+      "mse4": 0.985464074528771
+    },
+    "signed_logbank": {
+      "r4": 0.3551398404466101,
+      "r5": 0.3883311736183357,
+      "mae4": 0.6229579476160974,
+      "mse4": 0.9968669910292073
+    }
+  },
+  "seed": 42,
+  "fresh_full_training_models": 6,
+  "best_new_group": "morlet_broadband",
+  "comparison": [
+    {
+      "group": "morlet",
+      "label": "Morlet 40-300 Hz (previous)",
+      "source": "preceding completed ablation",
+      "r4": 0.7160496570160956,
+      "r5": 0.7272870012288412,
+      "mae4": 0.4584463976868482,
+      "mse4": 0.523025678829227
+    },
+    {
+      "group": "low_frequency",
+      "label": "Three signed low bands (previous)",
+      "source": "preceding completed ablation",
+      "r4": 0.5573630250928339,
+      "r5": 0.5763470459396747,
+      "mae4": 0.5116720232978647,
+      "mse4": 0.7043270075348843
+    },
+    {
+      "group": "hybrid",
+      "label": "Morlet + three low bands (previous)",
+      "source": "preceding completed ablation",
+      "r4": 0.7583730662365196,
+      "r5": 0.7714153324085733,
+      "mae4": 0.44543006867518037,
+      "mse4": 0.4869517065651083
+    },
+    {
+      "group": "morlet_broadband",
+      "label": "Broadband Morlet 0.5-300 Hz",
+      "source": "new full training",
+      "r4": 0.39828881925166626,
+      "r5": 0.4221821547489222,
+      "mae4": 0.6285755627481668,
+      "mse4": 0.985464074528771
+    },
+    {
+      "group": "signed_logbank",
+      "label": "Signed log filterbank 0.5-300 Hz",
+      "source": "new full training",
+      "r4": 0.3551398404466101,
+      "r5": 0.3883311736183357,
+      "mae4": 0.6229579476160974,
+      "mse4": 0.9968669910292073
+    }
+  ],
+  "protocol_sha256": "e218f4402845b98f13edcfe7bc615cfe2bb65b1e4963906ae96a57f2606d024d",
+  "labels_sha256": {
+    "1": "f4dd37941f0d878e87d9d7297ada0493b5a44874dbaa659472d048d4b7555dea",
+    "2": "fb902a3b63f7f53b41d6d548bbdd00f2164a239bd4e205e82042e3ffa3e3e8a4",
+    "3": "8216229b86f04e9b25648a11f431a735fabc777e7e308c0445e5c391525c4897"
+  },
+  "previous_summary_sha256": "ca806a2d04594d91c14851dbc9365a325e3a1c5459263609b8343c0d62f001cd",
+  "predictions_manifest_sha256": "2dcaf98d58903b0b725c60f7b42a2ba68aa035421b34a0ebafd8f78c1e2dccfb",
+  "primary_metric": "Complete 200000 original points per subject; four fingers excluding ring; equal-subject mean",
+  "full_train_record_r4": {
+    "morlet_broadband": 0.996311972227649,
+    "signed_logbank": 0.9964871394279099
+  },
+  "train_diagnostics_sha256": "ab07063aef437e178e3516af3d7d1bae726d8d52007e68e6cf43a7526a66ed15"
+}

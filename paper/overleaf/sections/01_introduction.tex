@@ -1,0 +1,10 @@
+\section{Introduction}
+Continuous reconstruction of individual finger movements is an important algorithmic task for motor brain--computer interfaces. Unlike discrete gesture recognition, trajectory decoding must recover the timing and shape of flexion throughout both movement and rest. ECoG provides spatially resolved cortical recordings from which movement trajectories can be estimated~\cite{schalk2007}. Public recordings and accompanying analyses have made this problem accessible to reproducible method development~\cite{miller2019}.
+
+High-frequency power and low-frequency voltage describe complementary signal properties. Power alone loses waveform polarity, whereas coarse spectral envelopes can discard frequency detail. A decoder must also capture local transitions and movement-sequence context despite short labeled recordings and heterogeneous electrode coverage. These considerations motivate combining structured spectral features, multiscale convolutions, and recurrent context.
+
+We introduce \emph{RecurFlex}, which concatenates a dense high-frequency Morlet representation with four signed low-frequency bands. A temporal encoder--decoder produces sample-aligned trajectories, and a residual bidirectional gated recurrent unit (BiGRU) augments its compressed bottleneck. Skip connections retain local detail while recurrence operates at reduced temporal resolution. We evaluate this combination through complete test-recording reconstruction and controlled feature experiments.
+
+We evaluate official BCI Competition IV Dataset 4 tests and all nine Miller fingerflex subjects under a chronological two-thirds development and one-third testing split. Figure~\ref{fig:model} summarizes the architecture.
+
+\input{figures/architecture_figure}

@@ -1,0 +1,9 @@
+comparison,subject,delta_r4
+four_minus_three_lowbands,1,0.04476694959181249
+four_minus_three_lowbands,2,0.0021001143729640903
+four_minus_three_lowbands,3,-0.011858555200931375
+four_minus_three_lowbands,mean,0.011669502921281771
+linear_minus_morlet,mean,-0.03212834392305419
+linear_minus_hybrid,mean,-0.07445175314347818
+linear_minus_morlet_broadband,mean,0.2856324938413751
+linear_minus_morlet_100,mean,0.34739730794093304

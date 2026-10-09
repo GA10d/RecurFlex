@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the RecurFlex repository; a paper identifier will be added when available."
+title: "RecurFlex: Multiband Recurrent Decoding of Finger Trajectories from ECoG"
+type: software
+authors:
+  - family-names: Guo
+    given-names: Zhewen
+    affiliation: Columbia University
+  - family-names: Peng
+    given-names: Hongxun
+    affiliation: Beihang University
+repository-code: "https://github.com/GA10d/RecurFlex"

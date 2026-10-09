@@ -1,0 +1,164 @@
+% Original RecurFlex diagram; feature glyphs are schematic.
+% Native width 226.6 mm; the manuscript scales it to \textwidth.
+\begingroup%
+\definecolor{RFink}{RGB}{43,52,65}%
+\definecolor{RFblue}{RGB}{69,115,166}%
+\definecolor{RFteal}{RGB}{55,135,126}%
+\definecolor{RFpurple}{RGB}{128,99,155}%
+\definecolor{RFgold}{RGB}{177,132,62}%
+\definecolor{RForange}{RGB}{219,135,48}%
+\definecolor{RFline}{RGB}{208,214,223}%
+\begin{tikzpicture}[
+  x=1mm,y=-1mm,
+  font=\sffamily\fontsize{10}{11.5}\selectfont,text=RFink,
+  flow/.style={-{Stealth[length=1.6mm,width=1.1mm]},draw=black,line width=0.6pt},
+  wire/.style={draw=black,line width=0.6pt},
+  skip/.style={-{Stealth[length=1.4mm,width=0.95mm]},draw=black,dashed,line width=0.5pt},
+  block/.style={draw=RFline,rounded corners=0.8mm,line width=0.55pt,
+    align=center,inner sep=0.7mm},
+  small/.style={font=\sffamily\fontsize{9.5}{10.8}\selectfont},
+  feature/.style={font=\sffamily\fontsize{8.5}{9.8}\selectfont},
+  head/.style={font=\sffamily\bfseries\fontsize{10}{11.5}\selectfont,anchor=west}
+]
+\path[use as bounding box] (-0.3,-1) rectangle (226.3,71);
+\begin{pgfinterruptboundingbox}
+\node[head] at (1,2) {(a) Multiband features};
+\node[head] at (74,2) {(b) RecurFlex};
+\node[head,anchor=center] at (210,2) {(c) Task head};
+
+% (a) Top-to-bottom feature pipeline; LF and HF branches sit side by side.
+\node[block,fill=RFblue!4,minimum width=22.5mm,minimum height=10mm,feature]
+  (ecog) at (34.5,12) {Preprocessed\\ECoG};
+\node[block,fill=RFpurple!6,minimum width=28.5mm,minimum height=13mm]
+  (lf) at (16.5,32) {};
+\node[block,fill=RFblue!5,minimum width=28.5mm,minimum height=13mm]
+  (hf) at (52.5,32) {};
+\draw[wire] (ecog.south) -- (34.5,21);
+\draw[flow] (34.5,21) -| (lf.north);
+\draw[flow] (34.5,21) -| (hf.north);
+\foreach \k in {0,...,3}{
+  \draw[RFpurple!25,line width=0.15pt] (3.7,{29.03+1.89*\k}) -- (9.37,{29.03+1.89*\k});
+  \draw[RFpurple,line width=0.55pt]
+    plot[domain=0:1,samples=45,variable=\t]
+    ({3.7+5.67*\t},{29.03+1.89*\k-0.585*sin((360+100*\k)*\t+28*\k)});
+}
+\node[align=center,feature] at (20.7,32) {Signed voltage\\$\delta,\theta,\alpha,\beta$\\0.5--30 Hz};
+\foreach \i in {0,...,6}{\foreach \j in {0,...,5}{
+  \pgfmathtruncatemacro{\tone}{20+mod(13*\i+23*\j+7*\i*\j,65)}
+  \fill[RFblue!\tone!white] ({39.7+0.81*\i},{28.85+0.99*\j}) rectangle ++(0.747,0.927);
+}}
+\node[align=center,feature] at (56.7,32) {Morlet power\\40 log bands\\40--300 Hz};
+\draw[wire] (lf.south) -- (16.5,43) -- (34.5,43);
+\draw[wire] (hf.south) -- (52.5,43) -- (34.5,43);
+\node[block,draw=RFgold,fill=RFgold!17,minimum width=21.5mm,minimum height=9mm,feature]
+  (flatten) at (34.5,52) {Flatten};
+\draw[flow] (34.5,43) -- (flatten.north);
+\draw[flow,rounded corners=1mm]
+  (flatten.south) -- (34.5,68.5) -- (71,68.5) -- (71,15) -- (75.3,15);
+
+% (b) Original module sizes; 8.5-mm vertical level spacing.
+% The encoder and decoder mirror about x=135.6 mm.
+% The five pre-pooling states E0--E4 supply the skip connections.
+\foreach \name/\xx/\yy/\hh/\channels in {
+  E0/78.4/15/10/64,E1/89.4/23.5/8/64,E2/100.4/32/6.7/128,
+  E3/111.4/40.5/5.3/256,E4/122.4/49/4.4/512}{
+  \node[minimum width=6.2mm,minimum height=\hh mm,inner sep=0pt]
+    (\name) at (\xx,\yy) {};
+  \filldraw[fill=RFblue!23,draw=RFblue,line width=0.55pt]
+    ({\xx-3.1},{\yy-\hh/2}) rectangle ({\xx+3.1},{\yy+\hh/2});
+  \filldraw[fill=RFblue!42,draw=RFblue,line width=0.5pt]
+    ({\xx+3.1},{\yy-\hh/2}) -- ++(1,-1) -- ++(0,\hh) -- ++(-1,1) -- cycle;
+  \filldraw[fill=RFblue!12,draw=RFblue,line width=0.5pt]
+    ({\xx-3.1},{\yy-\hh/2}) -- ++(1,-1) -- ++(6.2,0) -- ++(-1,1) -- cycle;
+  \node[small] at (\xx,\yy) {\channels};
+}
+\foreach \name/\xx/\yy/\hh/\channels in {
+  D1/148.8/49/4.4/512,D2/159.8/40.5/5.3/256,D3/170.8/32/6.7/128,
+  D4/181.8/23.5/8/64,D5/192.8/15/10/64}{
+  \node[minimum width=6.2mm,minimum height=\hh mm,inner sep=0pt]
+    (\name) at (\xx,\yy) {};
+  \filldraw[fill=RFteal!22,draw=RFteal,line width=0.55pt]
+    ({\xx-3.1},{\yy-\hh/2}) rectangle ({\xx+3.1},{\yy+\hh/2});
+  \filldraw[fill=RFteal!40,draw=RFteal,line width=0.5pt]
+    ({\xx-3.1},{\yy-\hh/2}) -- ++(-1,-1) -- ++(0,\hh) -- ++(1,1) -- cycle;
+  \filldraw[fill=RFteal!10,draw=RFteal,line width=0.5pt]
+    ({\xx+3.1},{\yy-\hh/2}) -- ++(-1,-1) -- ++(-6.2,0) -- ++(1,1) -- cycle;
+  \node[small] at (\xx,\yy) {\channels};
+}
+\node[small] at (78.4,6.5) {Stem};
+\foreach \a/\b in {E0/E1,E1/E2,E2/E3,E3/E4}{
+  \draw[flow] (\a.south) |- (\b.west);
+}
+\foreach \a/\b in {D1/D2,D2/D3,D3/D4,D4/D5}{
+  \draw[flow] (\a.east) -| (\b.south);
+}
+\foreach \src/\dest/\yy/\res in {
+  E0/D5/15/T,E1/D4/23.5/{T/2},E2/D3/32/{T/4},
+  E3/D2/40.5/{T/8},E4/D1/49/{T/16}}{
+  \draw[skip] ([xshift=1mm]\src.east) -- ([xshift=-1mm]\dest.west);
+  \node[fill=white,inner sep=0.5mm,small] at (135.6,\yy) {$\res$};
+}
+\node[block,draw=RFpurple,fill=RFpurple!12,
+  minimum width=18mm,minimum height=10mm,small]
+  (context) at (135.6,58.5) {Residual\\BiGRU};
+\draw[flow] (E4.south) |- (context.west);
+\draw[flow] (context.east) -| (D1.south);
+\node[small,text=RFpurple,anchor=south,inner sep=0pt,outer sep=0pt] at (135.6,68.5) {$512\times T/32$};
+\node[small,text=RFblue,align=center] at (100.4,58.5) {Encoder\\Conv + Max pooling};
+\node[small,text=RFteal,align=center] at (170.8,58.5) {Decoder\\Conv + Upsampling};
+
+% (c) Horizontal pointwise task head: nn.Conv1d(128, 5, 1).
+\node[block,draw=RFgold,fill=RFgold!17,minimum width=22mm,minimum height=8mm,small]
+  (readout) at (210,15) {Conv1D};
+\draw[flow] (D5.east) -- (readout.west);
+\node[block,draw=RForange,fill=RForange!4,minimum width=22mm,minimum height=44mm]
+  (output) at (210,46.5) {};
+\begin{scope}
+  \clip[rounded corners=0.8mm] (199,24.5) rectangle (221,68.5);
+  \fill[RForange!32] (199,24.5) rectangle (221,30.5);
+\end{scope}
+\draw[RForange,line width=0.55pt] (199,30.5) -- (221,30.5);
+\draw[RForange,rounded corners=0.8mm,line width=0.55pt] (199,24.5) rectangle (221,68.5);
+\node[small] at (210,27.5) {Output};
+% Schematic flexion: flat intervals, repeated sharp peaks, and return to rest.
+% These glyphs are not experimental measurements or model predictions.
+\foreach \k/\curvecolor in {0/RFblue,1/RFteal,2/RFpurple,3/RFgold,4/RFink}{
+  \draw[RFline,line width=0.15pt] (201,{37.5+6.7*\k}) -- (219,{37.5+6.7*\k});
+  \draw[\curvecolor,line width=0.55pt] plot coordinates {
+    ({201+18*(0)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.06)},{37.5+6.7*\k-0.075*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.12)},{37.5+6.7*\k-0.045*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.16+0.008*\k)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.18+0.008*\k)},{37.5+6.7*\k-0.045*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.19+0.008*\k)},{37.5+6.7*\k-4.2*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.2+0.008*\k)},{37.5+6.7*\k-0.18*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.213+0.008*\k)},{37.5+6.7*\k-5.25*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.225+0.008*\k)},{37.5+6.7*\k-0.135*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.238+0.008*\k)},{37.5+6.7*\k-4.95*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.251+0.008*\k)},{37.5+6.7*\k-0.18*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.264+0.008*\k)},{37.5+6.7*\k-5.7*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.277+0.008*\k)},{37.5+6.7*\k-0.135*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.29+0.008*\k)},{37.5+6.7*\k-4.8*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.303+0.008*\k)},{37.5+6.7*\k-0.135*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.316+0.008*\k)},{37.5+6.7*\k-4.05*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.329+0.008*\k)},{37.5+6.7*\k-0.12*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.342+0.008*\k)},{37.5+6.7*\k-4.5*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.355+0.008*\k)},{37.5+6.7*\k-0.105*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.39+0.008*\k)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.48+0.008*\k)},{37.5+6.7*\k-0.075*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.57+0.008*\k)},{37.5+6.7*\k-0.075*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.68+0.008*\k)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.715+0.008*\k)},{37.5+6.7*\k-0.075*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.728+0.008*\k)},{37.5+6.7*\k-5.55*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.741+0.008*\k)},{37.5+6.7*\k-0.165*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.754+0.008*\k)},{37.5+6.7*\k-4.65*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.767+0.008*\k)},{37.5+6.7*\k-0.12*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.8+0.008*\k)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+    ({201+18*(0.9)},{37.5+6.7*\k-0.075*(0.90+0.04*mod(\k,3))})
+    ({201+18*(1)},{37.5+6.7*\k-0.06*(0.90+0.04*mod(\k,3))})
+  };
+}
+\draw[flow] (readout.south) -- (output.north);
+\end{pgfinterruptboundingbox}
+\end{tikzpicture}%
+\endgroup%
