@@ -1,6 +1,6 @@
 {
-  "files": 217,
-  "total_bytes": 114634807,
+  "files": 226,
+  "total_bytes": 141839996,
   "python_syntax": "passed",
   "readme_links": "passed",
   "model_verification": "passed",
@@ -8,7 +8,6 @@
   "files_sha256": {
     ".gitignore": "4a4dc63b05a3b7eab0a364923eddb3a755f0e49faf3d699fca4d9cab818a9819",
     "CITATION.cff": "67ce1f8922269d0b01ef25c94426ad80d28866d833e43ccc1757b5c63403dd23",
-    "README.md": "247262d9e4f032999649e97395c4b22c56084f87fe3f706ed5632b2d8404459c",
     "assets/architecture.png": "65838c123d25e6da2428e7b316b3244666212d1796aa19250d51950f7526c9d4",
     "assets/miller_subject_correlations.png": "024bf24a3d7123d067438061381e71dbbcb42ba42295193ea830a6617c80ad06",
     "assets/s1_prediction_vs_label.png": "a50fc979afc924bbaaeff3ac0ca1f163c0da0a4ef4ca84d7dd780e347788b0fc",
@@ -222,6 +221,17 @@
     "paper/result/miller_fingerflex_9subjects_2of3/split_comparison.md": "9858dd32100136b944b20a37f30fb6b7b46f99e11ca1aa16db823c69f1381de9",
     "paper/result/miller_fingerflex_9subjects_2of3/subject_test_correlations.png": "024bf24a3d7123d067438061381e71dbbcb42ba42295193ea830a6617c80ad06",
     "paper/result/miller_fingerflex_9subjects_2of3/test_results.json": "02d3033e2ed9cc2fec47d5d83615c25546de70d51d93240134a0a06c23e24e77",
-    "paper/result/miller_fingerflex_9subjects_2of3/validation_selection.png": "71dd794a1b7b5baa6ad0952d082ad802cd24e45d81a59fe662d139564233bbd3"
-  }
+    "paper/result/miller_fingerflex_9subjects_2of3/validation_selection.png": "71dd794a1b7b5baa6ad0952d082ad802cd24e45d81a59fe662d139564233bbd3",
+    "assets/videos/README.md": "34d077bbdb8aeebced8a0f5a636197cafedc7fe6b813f548d8d9e0ab45348980",
+    "assets/videos/s1_hand_comparison.gif": "2d886b79696aea957b427410cc70d1f31d57e88bcd7f54de29fb85b066b82aea",
+    "assets/videos/s1_hand_comparison.mp4": "5c3e9d4ec17334ad79788c8386410f86317fa4479dc43504541bb5c89b7d4bb2",
+    "assets/videos/s2_hand_comparison.gif": "db00f0bfd6948bc66a2a47622f3d1a9c095784b4d0b5176f09770d18a1fb2704",
+    "assets/videos/s2_hand_comparison.mp4": "ea65bc56c76bc9da687098ec3b8bd96feec92bf76d78c4670d54eaac42b68470",
+    "assets/videos/s3_hand_comparison.gif": "ac1e8b5806b435c7c002f6d7d591a40c80a4406474f1d9e0fd1b500f2030f564",
+    "assets/videos/s3_hand_comparison.mp4": "776c9fee8282655602b5e62af6de8b324912f9270e9c04296f1022eb40489310",
+    "assets/videos/video_manifest.json": "6a661b0048ec7625403bce6962ed26cd0b9550b7d9f0613fb7323909845eb86c",
+    "tools/render_hand_videos.py": "dbcc8feea3c3620e49c942af49b24c1895c0be8ddc52b914351b0383e485c262",
+    "README.md": "e021e712a7739282608040e407789cd42f4b75d2bae70d324be2ebe1e6013893"
+  },
+  "video_verification": "Passed: 3 H.264 videos, 960x600, 25 fps, 20 s; complete decode; matching 20 s animated previews; input hashes and full-test scores verified."
 }

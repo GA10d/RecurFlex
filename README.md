@@ -80,15 +80,29 @@ The Miller comparisons use different splits, training contexts, and target grids
 
 **Blue: recorded label. Orange: RecurFlex prediction.** Every panel shows the full 0–200 s test recording, with no display smoothing, time shift, or amplitude calibration. Display samples are taken directly at 100 Hz; scores use all 200,000 original 1,000 Hz samples per subject.
 
+**Paired hand animations:** left = recorded label, right = prediction. All three demos show the fixed **60–80 s** official-test interval at **real time**. Both hands use the same training-derived glove-to-flexion mapping; poses are schematic, with no prediction smoothing or time shift. Click each animation to open its MP4. Full-test trajectories are retained below. [Video generation and provenance](assets/videos/README.md).
+
 #### Subject 1 · four-finger r = 0.8381
+
+[![Subject 1: recorded and predicted finger flexion animated as paired 3D hands](assets/videos/s1_hand_comparison.gif)](assets/videos/s1_hand_comparison.mp4)
+
+[▶ Watch Subject 1 MP4 · 20 s · real time](assets/videos/s1_hand_comparison.mp4)
 
 ![Subject 1: complete test prediction versus recorded finger flexion](assets/s1_prediction_vs_label.png)
 
 #### Subject 2 · four-finger r = 0.6963
 
+[![Subject 2: recorded and predicted finger flexion animated as paired 3D hands](assets/videos/s2_hand_comparison.gif)](assets/videos/s2_hand_comparison.mp4)
+
+[▶ Watch Subject 2 MP4 · 20 s · real time](assets/videos/s2_hand_comparison.mp4)
+
 ![Subject 2: complete test prediction versus recorded finger flexion](assets/s2_prediction_vs_label.png)
 
 #### Subject 3 · four-finger r = 0.7879
+
+[![Subject 3: recorded and predicted finger flexion animated as paired 3D hands](assets/videos/s3_hand_comparison.gif)](assets/videos/s3_hand_comparison.mp4)
+
+[▶ Watch Subject 3 MP4 · 20 s · real time](assets/videos/s3_hand_comparison.mp4)
 
 ![Subject 3: complete test prediction versus recorded finger flexion](assets/s3_prediction_vs_label.png)
 

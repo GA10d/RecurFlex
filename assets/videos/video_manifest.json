@@ -1,0 +1,95 @@
+{
+  "renderer_sha256": "dbcc8feea3c3620e49c942af49b24c1895c0be8ddc52b914351b0383e485c262",
+  "subjects": [
+    {
+      "subject": 1,
+      "interval_seconds": [
+        60,
+        80
+      ],
+      "interval_rule": "User-specified fixed interval, shared across subjects; README examples use 60\u201380 s, not optimized on predictions.",
+      "fps": 25,
+      "frames": 500,
+      "playback_speed": 1.0,
+      "prediction_sha256": "4f1868910fd110bcf6abf2f51e08590c170ff68110dd04c133651792195c03e2",
+      "label_sha256": "f4dd37941f0d878e87d9d7297ada0493b5a44874dbaa659472d048d4b7555dea",
+      "scaler_sha256": "3b845b9e71a3513874f789128203d0df0ba944f8e9b7d8aad8be95dd6173bfa0",
+      "pose_mapping": "clip((glove - training_target_min) / training_target_range, 0, 1), same mapping for both hands",
+      "visualisation_only": true,
+      "scoring_samples": 200000,
+      "r4": 0.838068408552266,
+      "r5": 0.8456959888758988,
+      "no_prediction_smoothing": true,
+      "no_time_shift": true,
+      "hand_geometry": "Original procedural schematic 3D hand; no anatomical angle calibration",
+      "mp4_sha256": "5c3e9d4ec17334ad79788c8386410f86317fa4479dc43504541bb5c89b7d4bb2",
+      "gif_sha256": "2d886b79696aea957b427410cc70d1f31d57e88bcd7f54de29fb85b066b82aea",
+      "mp4_bytes": 638798,
+      "gif_bytes": 8583092
+    },
+    {
+      "subject": 2,
+      "interval_seconds": [
+        60,
+        80
+      ],
+      "interval_rule": "User-specified fixed interval, shared across subjects; README examples use 60\u201380 s, not optimized on predictions.",
+      "fps": 25,
+      "frames": 500,
+      "playback_speed": 1.0,
+      "prediction_sha256": "01daa79b39b743313929c5c2979b55254d748cd14864c13aef40d0160b70de0f",
+      "label_sha256": "fb902a3b63f7f53b41d6d548bbdd00f2164a239bd4e205e82042e3ffa3e3e8a4",
+      "scaler_sha256": "31e1be0b1fdcff466a5355acdb8ac4e2a3a9ec8d090c1c944f32b190ee30c71f",
+      "pose_mapping": "clip((glove - training_target_min) / training_target_range, 0, 1), same mapping for both hands",
+      "visualisation_only": true,
+      "scoring_samples": 200000,
+      "r4": 0.6962977751396544,
+      "r5": 0.7043557854581755,
+      "no_prediction_smoothing": true,
+      "no_time_shift": true,
+      "hand_geometry": "Original procedural schematic 3D hand; no anatomical angle calibration",
+      "mp4_sha256": "ea65bc56c76bc9da687098ec3b8bd96feec92bf76d78c4670d54eaac42b68470",
+      "gif_sha256": "db00f0bfd6948bc66a2a47622f3d1a9c095784b4d0b5176f09770d18a1fb2704",
+      "mp4_bytes": 443047,
+      "gif_bytes": 8585851
+    },
+    {
+      "subject": 3,
+      "interval_seconds": [
+        60,
+        80
+      ],
+      "interval_rule": "User-specified fixed interval, shared across subjects; README examples use 60\u201380 s, not optimized on predictions.",
+      "fps": 25,
+      "frames": 500,
+      "playback_speed": 1.0,
+      "prediction_sha256": "9367d0aaadebfc33a6d85340e6b380acce8d18e8842a61dcc933d19a5fb116f8",
+      "label_sha256": "8216229b86f04e9b25648a11f431a735fabc777e7e308c0445e5c391525c4897",
+      "scaler_sha256": "689a00647d41d2b597b59ccb4fc77214016ec526e0ea3228b51ccf4878f3c0fb",
+      "pose_mapping": "clip((glove - training_target_min) / training_target_range, 0, 1), same mapping for both hands",
+      "visualisation_only": true,
+      "scoring_samples": 200000,
+      "r4": 0.7879166844808818,
+      "r5": 0.800588346991363,
+      "no_prediction_smoothing": true,
+      "no_time_shift": true,
+      "hand_geometry": "Original procedural schematic 3D hand; no anatomical angle calibration",
+      "mp4_sha256": "776c9fee8282655602b5e62af6de8b324912f9270e9c04296f1022eb40489310",
+      "gif_sha256": "ac1e8b5806b435c7c002f6d7d591a40c80a4406474f1d9e0fd1b500f2030f564",
+      "mp4_bytes": 593149,
+      "gif_bytes": 8341160
+    }
+  ],
+  "qa": {
+    "mp4_all_frames_decode": "passed",
+    "mp4_size": [
+      960,
+      600
+    ],
+    "mp4_duration_seconds": 20,
+    "mp4_fps": 25,
+    "gif_duration_seconds": 20,
+    "gif_frames": 250,
+    "visual_inspection": "contact sheet from actual encoded videos, three samples per subject; no title or footer overlap"
+  }
+}
