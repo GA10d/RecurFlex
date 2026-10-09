@@ -9,7 +9,17 @@ RecurFlex reconstructs continuous finger trajectories from electrocorticography 
 
 RecurFlex delivers **SOTA**-level offline decoding performance on **BCI Competition IV Dataset 4**, evaluated using the official training/test split and four-finger Pearson-correlation scoring (**mean r = 0.7741**). The published-method comparisons below provide context; their differing evaluation protocols require care when interpreting rankings.
 
-[**Preprint · Zenodo DOI: 10.5281/zenodo.23258246**](https://doi.org/10.5281/zenodo.23258246) · [Manuscript source](paper/overleaf/main.tex) · [BCI implementation](paper/code/Main%20Experiment) · [BCI results](paper/result/main%20experiment%20average%20r/summary.json) · [Nine-subject results](paper/result/miller_fingerflex_9subjects_2of3/test_results.json) · [Feature ablations](paper/code/Ablation%20Experiment/frequency%20feature%20selection)
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.23258246"><strong>Preprint · Zenodo DOI: 10.5281/zenodo.23258246</strong></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/GA10d/RecurFlex/blob/main/paper/overleaf/main.tex">Manuscript source</a> ·
+  <a href="https://github.com/GA10d/RecurFlex/blob/main/paper/code/Main%20Experiment">BCI implementation</a> ·
+  <a href="https://github.com/GA10d/RecurFlex/blob/main/paper/result/main%20experiment%20average%20r/summary.json">BCI results</a> ·
+  <a href="https://github.com/GA10d/RecurFlex/blob/main/paper/result/miller_fingerflex_9subjects_2of3/test_results.json">Nine-subject results</a> ·
+  <a href="https://github.com/GA10d/RecurFlex/blob/main/paper/code/Ablation%20Experiment/frequency%20feature%20selection">Feature ablations</a>
+</p>
 
 ## Model overview
 
