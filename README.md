@@ -7,7 +7,9 @@
 
 RecurFlex reconstructs continuous finger trajectories from electrocorticography (ECoG). It combines high-frequency Morlet power with signed low-frequency voltage features, a temporal convolutional encoder–decoder, and a residual bidirectional GRU at the bottleneck.
 
-[Manuscript source](paper/overleaf/main.tex) · [BCI implementation](paper/code/Main%20Experiment) · [BCI results](paper/result/main%20experiment%20average%20r/summary.json) · [Nine-subject results](paper/result/miller_fingerflex_9subjects_2of3/test_results.json) · [Feature ablations](paper/code/Ablation%20Experiment/frequency%20feature%20selection)
+RecurFlex delivers **SOTA**-level offline decoding performance on **BCI Competition IV Dataset 4**, evaluated using the official training/test split and four-finger Pearson-correlation scoring (**mean r = 0.7741**). The published-method comparisons below provide context; their differing evaluation protocols require care when interpreting rankings.
+
+[**Preprint · Zenodo DOI: 10.5281/zenodo.23258246**](https://doi.org/10.5281/zenodo.23258246) · [Manuscript source](paper/overleaf/main.tex) · [BCI implementation](paper/code/Main%20Experiment) · [BCI results](paper/result/main%20experiment%20average%20r/summary.json) · [Nine-subject results](paper/result/miller_fingerflex_9subjects_2of3/test_results.json) · [Feature ablations](paper/code/Ablation%20Experiment/frequency%20feature%20selection)
 
 ## Model overview
 
@@ -33,6 +35,36 @@ Each subject uses the complete 400-second training recording and the complete 20
 | **Mean** | **0.774094** | **0.783547** | **0.429400** | **0.453124** |
 
 The official four-finger metric includes the thumb, index, middle, and little fingers. The ring finger is predicted and shown as an auxiliary output. MAE and MSE use the original glove units.
+
+### Comparison with reported methods
+
+The following tables reproduce the comparison in the [preprint](https://doi.org/10.5281/zenodo.23258246) and [manuscript table](paper/overleaf/tables/literature_comparison.tex). **RecurFlex results are bold.** All values in these two comparison tables are **five-finger** Pearson correlations, including the auxiliary ring finger; the official four-finger BCI metric is reported separately above.
+
+**BCI Dataset 4 — TRACE repository reports**
+
+| Method | S1 | S2 | S3 | Mean |
+|:--|--:|--:|--:|--:|
+| FingerFlex | 0.575 | 0.520 | 0.692 | 0.597 |
+| DTCNet | 0.696 | 0.598 | 0.747 | 0.680 |
+| DeepFingerNet | 0.427 | 0.312 | 0.541 | 0.427 |
+| TRACE | 0.776 | 0.622 | 0.773 | 0.724 |
+| **RecurFlex (ours)** | **0.8457** | **0.7044** | **0.8006** | **0.7835** |
+
+FingerFlex, DTCNet, and DeepFingerNet scores are the [TRACE authors' reimplementations](https://github.com/epyifany/TRACE/tree/5c7e47a469e266b472dfec82cf4adc379b25c23a); TRACE is their reported run. We evaluated RecurFlex independently. Source means are retained as reported. Checkpoint selection, target delay, smoothing, and scoring grids differ, so this is not a common-protocol ranking.
+
+**Miller fingerflex — reported means under differing protocols**
+
+| Method | Report / evaluation setting | Mean |
+|:--|:--|--:|
+| [FingerFlex](https://arxiv.org/abs/2211.01960v2) | Original paper | ≈0.49 |
+| [HiLoFuseNet](https://github.com/hisunjiang/HiLoFuseNet/blob/bee83100953c85332e9ad24020345d8dad79a963/manuscript.pdf) | Updated manuscript | 0.558 |
+| [CORTEG](https://arxiv.org/abs/2605.10337v1) | Pooled | 0.554 |
+| [CORTEG](https://arxiv.org/abs/2605.10337v1) | Enhanced Base | 0.583 |
+| FingerFlex | TRACE authors; 85/15 split | 0.436 |
+| [TRACE](https://github.com/epyifany/TRACE/tree/5c7e47a469e266b472dfec82cf4adc379b25c23a) | 85/15 split | 0.508 |
+| **RecurFlex (ours)** | **Two-thirds development / one-third test** | **0.6432** |
+
+The Miller comparisons use different splits, training contexts, and target grids. RecurFlex has the highest reported mean among the rows shown, but the table does not establish superiority under identical evaluation conditions. The nine-subject extension is distinct from the official BCI evaluation described above.
 
 ### Prediction vs. recorded labels
 
@@ -87,6 +119,7 @@ python main.py --stage test --device cuda
 Use `--device cpu` for CPU execution, or `--data-dir /path/to/data --labels-dir /path/to/labels` for external data locations. Predictions are saved before evaluation reads test labels. Outputs appear in `runs/main/predictions/` and `runs/main/results/`.
 
 ```bash
+
 # Train fresh models with the published subject-specific budgets, then evaluate.
 python main.py --stage all --run-dir runs/retrained42 --device cuda
 
@@ -113,15 +146,16 @@ The paper source can be uploaded to Overleaf with `main.tex` as the entry point 
 
 ## Citation
 
-Until a DOI or arXiv identifier is available, cite the repository:
+The manuscript is available as a [Zenodo preprint](https://doi.org/10.5281/zenodo.23258246). Please cite the preprint:
 
 ```bibtex
 @misc{guo_recurflex_2026,
   author = {Guo, Zhewen and Peng, Hongxun},
   title = {RecurFlex: Multiband Recurrent Decoding of Finger Trajectories from ECoG},
   year = {2026},
-  howpublished = {GitHub repository},
-  url = {https://github.com/GA10d/RecurFlex}
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.23258246},
+  url = {https://doi.org/10.5281/zenodo.23258246}
 }
 ```
 
