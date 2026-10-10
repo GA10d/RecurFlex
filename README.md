@@ -1,4 +1,7 @@
-# RecurFlex: Multiband Recurrent Decoding of Finger Trajectories from ECoG
+
+<h1 align="center">
+  RecurFlex: Multiband Recurrent Decoding of Finger Trajectories from ECoG
+</h1>
 
 **Zhewen Guo** · Columbia University · [zg2567@columbia.edu](mailto:zg2567@columbia.edu)  
 **Hongxun Peng** · Beihang University · [huxley329@buaa.edu.cn](mailto:huxley329@buaa.edu.cn)
